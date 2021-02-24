@@ -1,0 +1,62 @@
+import styled from '@emotion/styled'
+
+const size = ({ size }) => size
+
+export const Image = styled.div`
+  background-color: white;
+  background-size: cover;
+  border: 0;
+  border-radius: 50%;
+  color: black;
+  display: inline-block;
+  font-family: var(--primary-font);
+  font-size: ${ size };
+  font-weight: 600;
+  height: 3em;
+  line-height: 3em;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: bottom;
+  width: 3em;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+
+  ${({ image }) => !image ? '' : `
+    &:before {
+      content: '';
+      background-image: url(${ image });
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+  `}
+
+  :after {
+    content: attr(aria-label);
+    font-size: 13px;
+    line-height: 1.2em;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform:  translate(-50%, 2px);
+    background: var(--foreground);
+    color: var(--primary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+  }
+
+  :hover, :focus {
+    :after {opacity: 1}
+  }
+`

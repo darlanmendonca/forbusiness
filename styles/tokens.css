@@ -1,0 +1,27 @@
+body {
+  /* brands */
+  --institutional-color: #1073c0;
+  --candidates-color: #50c092;
+  --forbusiness-color: #FF7F2E;
+  --brand-gradient: linear-gradient(90deg, #f7902a, #f9564b);
+
+  /* color scheme */
+  --background: #eee;
+  --foreground: white;
+  --primary: black;
+  --secondary: #8c8c8c;
+  --tertiary: #d4d5d5;
+
+  /* typography */
+  --primary-font: 'Open Sans', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --background: black;
+    --foreground: #202024;
+    --primary: white;
+    --secondary: #343a40;
+    --tertiary: #212529;
+  }
+}

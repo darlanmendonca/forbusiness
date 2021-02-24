@@ -1,65 +1,60 @@
+import Page from '../page/page.component.js'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import SegmentHeader from '../segment-header/segment-header.component'
+import MainHeader from '../main-header/main-header.component'
+import Avatar from '../avatar/avatar.component.js'
+import Menu from '../menu/menu.component.js'
+import WelcomeHeader from '../welcome-header/welcome-header.component.js'
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+const Content = ({ children }) => (
+  <main style={{ flex: 1, color: 'var(--primary)', margin: '0 auto', maxWidth: 1200, width: '100%' }}>
+    { children }
+  </main>
+)
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+const Home = () => (
+  <Page>
+    <SegmentHeader current='forbusiness' />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+    <MainHeader>
+      <MainHeader.Link label='Início' href='/'  />
+      <MainHeader.Link label='Vagas' href='/vagas' />
+      <MainHeader.Link label='Profissionais' href='/profissionais' />
+      <MainHeader.Link label='Relatórios' href='/relatorios' />
+      <MainHeader.Link label='Configurações' href='/configuracoes' />
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+      <MainHeader.Button label='Buscar profissionais' icon='search' />
+      <MainHeader.Button label='Novidades' icon='megaphone' solid />
+      <MainHeader.Button label='Mensagens' icon='message-square-detail' solid />
+      <MainHeader.Button label='Entrevistas online' icon='videos' solid />
+      <MainHeader.Button label='Marketplace' icon='shopping-bag' solid />
+      <MainHeader.Button label='Ajuda' icon='help-circle' solid />
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+      <Avatar
+        label='Moisés'
+        as='button'
+        image='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlnbPwGl2V5JYyHx0FKy1daEeMN77cDCKPjQ&usqp=CAU'
+        size='.75rem' style={{ transform: 'translateY(-1rem)', marginLeft: 8 }}
+      />
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+      {/* <Menu label='Darlan'> */}
+      {/*   <Menu.Item */}
+      {/*     label='Alterar senha' */}
+      {/*     href='/alterar-senha' */}
+      {/*   /> */}
+      {/*   <Menu.Item */}
+      {/*     label='Sair' */}
+      {/*     href='/sair' */}
+      {/*   /> */}
+      {/* </Menu> */}
+    </MainHeader>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+    <WelcomeHeader />
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
-}
+    <Page.Content>
+
+    </Page.Content>
+  </Page>
+)
+
+export default Home
