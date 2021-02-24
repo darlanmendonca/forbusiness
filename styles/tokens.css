@@ -18,7 +18,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   body {
-    --background: black;
+    --background: #0d1117;
     --foreground: #202024;
     --primary: white;
     --secondary: #343a40;
