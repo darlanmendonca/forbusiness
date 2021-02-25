@@ -6,8 +6,6 @@ import Menu from '../menu/menu.component.js'
 
 const Sobre = () => (
   <Page>
-    <SegmentHeader current='forbusiness' />
-
     <MainHeader>
       <MainHeader.Link
         label='Plataforma de Recrutamento e Seleção'

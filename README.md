@@ -8,6 +8,16 @@ Para rodar o projeto localmente use o script, e acesse a url [localhost:3000](ht
 npm run dev
 ```
 
+Se preferir rodar localmente, mas utilizar automaticamente variáveis de ambiente provisionadas pela Vercel, utilie o `vercel` cli.
+
+```sh
+# instalao vercel cli
+npm i -g vercel
+
+# starta o projeto
+vercel dev
+```
+
 Problemas encontrados são listados abaixo:
 
 ### Títulos da aba
