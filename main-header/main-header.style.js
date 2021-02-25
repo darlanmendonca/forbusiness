@@ -3,7 +3,9 @@ import styled from '@emotion/styled'
 export const Header = styled.header`
   position: sticky;
   top: 0;
+  z-index: 10;
   background: var(--brand-gradient);
+  /*box-shadow: var(--elevation);*/
 `
 
 export const Container = styled.div`

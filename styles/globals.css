@@ -3,7 +3,9 @@ body {
   padding: 0;
   margin: 0;
   background: var(--background);
-  /*font-family: var(--primary-font);*/
+  color: var(--primary);
+  font-family: var(--primary-font);
+  /*-webkit-font-smoothing: antialiased;*/
   /*font-size: 15px;*/
   /*line-height: 1.467em;*/
 }

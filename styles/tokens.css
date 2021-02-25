@@ -14,6 +14,9 @@ body {
 
   /* typography */
   --primary-font: 'Open Sans', sans-serif;
+
+  /* shadow */
+  --elevation: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
 @media (prefers-color-scheme: dark) {

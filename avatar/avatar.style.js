@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { css } from '@emotion/react'
 
 const size = ({ size }) => size
 
@@ -22,8 +23,10 @@ export const Image = styled.div`
   width: 3em;
   -webkit-font-smoothing: antialiased;
   position: relative;
+  border: 2px solid white;
+  box-sizing: border-box;
 
-  ${({ image }) => !image ? '' : `
+  ${({ image }) => !image ? '' : css`
     &:before {
       content: '';
       background-image: url(${ image });
@@ -34,12 +37,16 @@ export const Image = styled.div`
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      border: 2px solid white;
+    }
+  `}
+
+  ${({ tooltip }) => tooltip && css`
+    :after {
+      content: attr(aria-label);
     }
   `}
 
   :after {
-    content: attr(aria-label);
     font-size: 13px;
     line-height: 1.2em;
     position: absolute;
