@@ -20,7 +20,7 @@ const Home = () => {
           image={ user.image }
           size='17px'
         />
-        <h2>Olá { user.firstname }</h2>
+        <h2 style={{ marginTop: 15 }}>Olá { user.firstname }</h2>
         <p>
           Você não tem vagas abertas na <strong>{ user.company }</strong>.
           <Link href='/vagas' passHref>

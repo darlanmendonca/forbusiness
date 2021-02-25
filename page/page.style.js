@@ -19,7 +19,7 @@ export const Content = styled.main`
 
 export const Header = styled.header`
   background: var(--brand-gradient);
-  padding: 40px 0;
+  padding: 20px 0 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +38,6 @@ export const Header = styled.header`
     font-size: 24px;
     font-weight: 300;
     margin: 0;
-    margin-top: 15px;
   }
 
   p {
