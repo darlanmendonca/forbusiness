@@ -2,23 +2,33 @@
 
 Este projeto é uma POC (prova de conceito) com o objetivo de listar problemas e propor soluções de forma funcional e/ou escrita.
 
+## Desenvolvimento
+
 Para rodar o projeto localmente use o script, e acesse a url [localhost:3000](http://localhost:3000)
 
 ```sh
 npm run dev
 ```
 
-Se preferir rodar localmente, mas utilizar automaticamente variáveis de ambiente provisionadas pela Vercel, utilie o `vercel` cli.
+Se preferir rodar localmente, mas utilizar automaticamente variáveis de ambiente provisionadas pela Vercel, utilize o `vercel` cli (necessário uma conta de usuário, se não tem pode criar uma [aqui](https://vercel.com/signup). Você também encontra documentação completa do vercel cli [aqui](https://vercel.com/docs/cli#commands/dev)
+
+
+Mas basicamente, vocé deve logar, baixar as variaveis de ambiente, e startar o projeto, assim:
 
 ```sh
-# instalao vercel cli
-npm i -g vercel
+# loga na conta de usuário
+npm run vercel -- login
+
+# baixa as variáveis de ambiente de desenvolvimento
+npm run vercel -- env pull
 
 # starta o projeto
-vercel dev
+npm run vercel -- dev
 ```
 
-Problemas encontrados são listados abaixo:
+## Problemas encontrados
+
+A seguir, você encontra uma lista em progresso, com os problemas de experiência encontrados no VAGAS For business.
 
 ### Títulos da aba
 
