@@ -1,6 +1,7 @@
 import { Header, Container, Navigation, NavigationLink, Button } from './main-header.style.js'
 import Link from 'next/link'
 import Icon from '../icon/icon.component.js'
+import { useRouter } from 'next/router'
 
 const MainHeader = ({ children }) => (
   <Header aria-label='Principal'>
@@ -25,11 +26,17 @@ const MainHeader = ({ children }) => (
 
 export default MainHeader
 
-MainHeader.Link = ({ label, href }) => (
-  <Link href={ href } passHref>
-    <NavigationLink>{ label }</NavigationLink>
-  </Link>
-)
+MainHeader.Link = ({ label, href }) => {
+  const router = useRouter()
+
+  return router.pathname === href
+    ? <NavigationLink data-active>{ label }</NavigationLink>
+    : (
+    <Link href={ href } passHref>
+      <NavigationLink>{ label }</NavigationLink>
+    </Link>
+  )
+}
 
 MainHeader.Button = ({ label, icon, solid }) => (
   <Button aria-label={ label }>

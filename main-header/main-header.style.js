@@ -37,7 +37,7 @@ export const NavigationLink = styled.a`
   line-height: 66px;
   height: 44px;
 
-  :hover:after {
+  :hover:after, &[data-active]:after {
     opacity: 1;
     transform: translate3d(-50%, 0, 0);
     width: 100%;
