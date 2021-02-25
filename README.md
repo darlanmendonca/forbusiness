@@ -4,7 +4,7 @@ Este projeto é uma POC (prova de conceito) com o objetivo de listar problemas e
 
 ## Produção
 
-Você pode visualizar esta POC em produção na url [https://forbusiness.vercel.app](forbusiness.vercel.app).
+Você pode visualizar esta POC em produção na url [https://forbusiness.vercel.app](https://forbusiness.vercel.app/).
 
 ## Desenvolvimento
 
