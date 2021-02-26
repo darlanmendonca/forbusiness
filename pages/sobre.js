@@ -1,9 +1,9 @@
-import Page from '../page/page.component.js'
+import Page from '../components/page/page.component.js'
 import Head from 'next/head'
-import SegmentHeader from '../segment-header/segment-header.component'
-import MainHeader from '../main-header/main-header.component'
+import SegmentHeader from '../components/segment-header/segment-header.component'
+import MainHeader from '../components/main-header/main-header.component'
 import Link from 'next/link'
-import Menu from '../menu/menu.component.js'
+import Menu from '../components/menu/menu.component.js'
 
 const Sobre = () => (
   <Page>

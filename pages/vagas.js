@@ -1,6 +1,6 @@
-import Page from '../page/page.component.js'
+import Page from '../components/page/page.component.js'
 import Head from 'next/head'
-import SystemHeader from '../system-header/system-header.component.js'
+import SystemHeader from '../components/system-header/system-header.component.js'
 
 const Vagas = () => (
   <Page>

@@ -1,5 +1,5 @@
 import MainHeader from '../main-header/main-header.component'
-import { useUser } from '../user/user.hook.js'
+import { useUser } from '../../hooks/user/user.hook.js'
 import Avatar from '../avatar/avatar.component.js'
 // import Menu from '../menu/menu.component.js'
 

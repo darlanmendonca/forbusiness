@@ -1,5 +1,5 @@
 import Card from '../card/card.component.js'
-import { Container } from '../charts/charts.style.js'
+import { Container } from './charts.style.js'
 
 const Charts = () => (
   <Container>

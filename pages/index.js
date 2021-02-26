@@ -1,10 +1,10 @@
-import Page from '../page/page.component.js'
-import SystemHeader from '../system-header/system-header.component.js'
-import Avatar from '../avatar/avatar.component.js'
+import Page from '../components/page/page.component.js'
+import SystemHeader from '../components/system-header/system-header.component.js'
+import Avatar from '../components/avatar/avatar.component.js'
 import Link from 'next/link'
-import { useUser } from '../user/user.hook.js'
-import Card from '../card/card.component.js'
-import Charts from '../charts/charts.component.js'
+import { useUser } from '../hooks/user/user.hook.js'
+import Card from '../components/card/card.component.js'
+import Charts from '../components/charts/charts.component.js'
 
 const Home = () => {
   const user = useUser()
