@@ -53,7 +53,7 @@ export const MenuList = styled.ul`
     text-decoration: none;
 
     :hover {
-      color: var(--forbusiness-color);
+      color: var(--professionals-color);
     }
   }
 

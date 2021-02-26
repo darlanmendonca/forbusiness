@@ -5,6 +5,16 @@ import MainHeader from '../components/main-header/main-header.component'
 import Link from 'next/link'
 import Menu from '../components/menu/menu.component.js'
 
+/**
+  * Exibe informativos gerais sobre a plataforma, tais como
+  * lista de clientes,
+  * software de recrutamento e seleção,
+  * inteligência artificial,
+  * aplicação de testes,
+  * ações automáticas,
+  * artigos editoriais,
+  * e contato.
+  */
 const Sobre = () => (
   <Page>
     <Head>

@@ -1,3 +1,9 @@
+/**
+  * Retorna informações do usuário, sendo
+  * - firstname: Nome do usuário
+  * - image: Foto do usuário
+  * - company: Nome da empresa
+  */
 export const useUser = () => {
   return {
     firstname: 'Moisés',

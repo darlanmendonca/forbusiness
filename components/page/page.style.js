@@ -15,6 +15,15 @@ export const Content = styled.main`
   width: 100%;
   color: var(--primary);
   font-family: var(--primary-font);
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+
+    :hover {
+      text-decoration: underline;
+    }
+  }
 `
 
 export const Header = styled.header`

@@ -1,26 +1,13 @@
 import { Navigation, Link } from './segment-header.style.js'
+import { useSegmentHeader } from './segment-header.hook.js'
+import { oneOf } from 'prop-types'
 
+/**
+  * O componente `SegmentHeader` exibe links para os prinncipais
+  * segmentos da vagas, sendo Institucional, Candidatos, e Profissionais.
+  */
 const SegmentHeader = ({ current }) => {
-  const segments = [
-    {
-      id: 'institutional',
-      label: 'Institucional',
-      url: process.env.NEXT_PUBLIC_URL_INSTITUCIONAL,
-      color: 'var(--institutional-color)',
-    },
-    {
-      id: 'candidates',
-      label: 'Para candidatos',
-      url: process.env.NEXT_PUBLIC_URL_CANDIDATOS,
-      color: 'var(--candidates-color)',
-    },
-    {
-      id: 'forbusiness',
-      label: 'Para empresas',
-      url: process.env.NEXT_PUBLIC_URL_EMPRESAS,
-      color: 'var(--forbusiness-color)',
-    },
-  ]
+  const segments = useSegmentHeader()
 
   const toLinks = segment => (
     <Link
@@ -41,3 +28,8 @@ const SegmentHeader = ({ current }) => {
 }
 
 export default SegmentHeader
+
+SegmentHeader.propTypes = {
+  // Define o segmento atual/em uso
+  current: oneOf(['institutional', 'candidates', 'professionals']),
+}

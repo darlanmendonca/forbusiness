@@ -1,11 +1,14 @@
 import Card from '../card/card.component.js'
 import { Container } from './charts.style.js'
 
+/**
+  * O componente `Charts` exibe gráficos resumidos ao usuário
+  */
 const Charts = () => (
   <Container>
-    <Card placeholder='SLA de vagas'>
+    <Card subtitle='SLA de vagas'>
     </Card>
-    <Card placeholder='Novas candidaturas'>
+    <Card subtitle='Novas candidaturas'>
     </Card>
   </Container>
 )

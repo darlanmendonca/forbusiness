@@ -3,7 +3,11 @@ import { useUser } from '../../hooks/user/user.hook.js'
 import Avatar from '../avatar/avatar.component.js'
 // import Menu from '../menu/menu.component.js'
 
-const SystemHeader = () => {
+/**
+  * O componente `UserHeader` exibe o links e opções de usuário,
+  * baseado nas permissões do usuário.
+  */
+const UserHeader = () => {
   const user = useUser()
 
   return (
@@ -18,11 +22,12 @@ const SystemHeader = () => {
       <MainHeader.Button label='Novidades' icon='megaphone' solid />
       <MainHeader.Button label='Mensagens' icon='message-square-detail' solid />
       <MainHeader.Button label='Entrevistas online' icon='videos' solid />
-      <MainHeader.Button label='Marketplace' icon='shopping-bag' solid />
+      <MainHeader.Button label='Marketplace' icon='store' solid />
       <MainHeader.Button label='Ajuda' icon='help-circle' solid />
 
       <Avatar
         label={ user.firstname }
+        aria-label='Opções de usuário'
         as='button'
         image={ user.image }
         size='.75rem'
@@ -44,4 +49,4 @@ const SystemHeader = () => {
   )
 }
 
-export default SystemHeader
+export default UserHeader

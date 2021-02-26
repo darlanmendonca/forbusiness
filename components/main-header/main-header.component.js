@@ -2,7 +2,14 @@ import { Header, Container, Navigation, NavigationLink, Button } from './main-he
 import Link from 'next/link'
 import Icon from '../icon/icon.component.js'
 import { useRouter } from 'next/router'
+import { node } from 'prop-types'
 
+/**
+  * O componente `MainHeader` exibe o header de navegação principal.
+  * O mesmo é fixado ao scrollar a página, de forma que é sempre visível.
+  * Em ambientes mobile, os links de navegação, bem como outras opções,
+  * são exibidas através de um menu lateral.
+  */
 const MainHeader = ({ children }) => (
   <Header aria-label='Principal'>
     <Container>
@@ -26,6 +33,15 @@ const MainHeader = ({ children }) => (
 
 export default MainHeader
 
+MainHeader.propTypes = {
+  // Define o conteúdo do header
+  children: node,
+}
+
+/**
+  * O MainHeader.Link exibe um link de navegação
+  * e informa ao usuário se é um link ativo.
+  */
 MainHeader.Link = ({ label, href }) => {
   const router = useRouter()
 
@@ -38,6 +54,10 @@ MainHeader.Link = ({ label, href }) => {
   )
 }
 
+/**
+  * O MainHeader.Button exibe um botão com ícone e tooltip,
+  * posicionado de forma secundária visualmente.
+  */
 MainHeader.Button = ({ label, icon, solid }) => (
   <Button aria-label={ label }>
     <Icon

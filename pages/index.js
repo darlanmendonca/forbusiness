@@ -1,17 +1,21 @@
 import Page from '../components/page/page.component.js'
-import SystemHeader from '../components/system-header/system-header.component.js'
+import UserHeader from '../components/user-header/user-header.component.js'
 import Avatar from '../components/avatar/avatar.component.js'
 import Link from 'next/link'
 import { useUser } from '../hooks/user/user.hook.js'
 import Card from '../components/card/card.component.js'
 import Charts from '../components/charts/charts.component.js'
 
+/**
+  * Página inicial, visível apenas para usuários logados.
+  * Atua como um dashboard, exibindo informações e links úteis.
+  */
 const Home = () => {
   const user = useUser()
 
   return (
     <Page>
-      <SystemHeader />
+      <UserHeader />
 
       <Page.Header>
         <Avatar

@@ -16,4 +16,13 @@ export const Footer = styled.footer`
     transform: translateY(6px);
     margin-right: 10px;
   }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+
+    :hover {
+      text-decoration: underline;
+    }
+  }
 `

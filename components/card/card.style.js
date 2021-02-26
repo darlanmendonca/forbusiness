@@ -20,3 +20,8 @@ export const Title = styled.h2`
 export const Subtitle = styled(Title)`
   margin-top: 0;
 `
+
+export const Illustration = styled.img`
+  display: block;
+  margin: 0 auto 4em;
+`

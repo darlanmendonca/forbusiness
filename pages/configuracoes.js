@@ -1,14 +1,21 @@
 import Page from '../components/page/page.component.js'
 import Head from 'next/head'
-import SystemHeader from '../components/system-header/system-header.component.js'
+import UserHeader from '../components/user-header/user-header.component.js'
 
+/**
+  * Exibe configurações gerais da empresa como
+  * dados da empresa,
+  * construtor de testes,
+  * fichas disponíveis,
+  * e relatórios disponíveis.
+  */
 const Configuracoes = () => (
   <Page>
     <Head>
       <title>Configurações - { process.env.NEXT_PUBLIC_APP_NAME }</title>
     </Head>
 
-    <SystemHeader />
+    <UserHeader />
 
     <Page.Header>
       <h2>Configurações</h2>

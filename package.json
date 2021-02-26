@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "vercel":  "vercel"
+    "vercel": "vercel"
   },
   "dependencies": {
     "@emotion/react": "^11.1.5",
@@ -18,6 +18,8 @@
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.2.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "prop-types": "^15.7.2",
     "vercel": "^21.2.3"
   }
 }

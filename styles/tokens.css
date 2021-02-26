@@ -2,7 +2,7 @@ body {
   /* brands */
   --institutional-color: #1073c0;
   --candidates-color: #50c092;
-  --forbusiness-color: #FF7F2E;
+  --professionals-color: #FF7F2E;
   --brand-gradient: linear-gradient(90deg, #f7902a, #f9564b);
 
   /* color scheme */
@@ -11,6 +11,7 @@ body {
   --primary: black;
   --secondary: #8c8c8c;
   --tertiary: #d4d5d5;
+  --accent: var(--professionals-color);
 
   /* typography */
   --primary-font: 'Open Sans', sans-serif;

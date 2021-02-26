@@ -1,14 +1,20 @@
 import Page from '../components/page/page.component.js'
 import Head from 'next/head'
-import SystemHeader from '../components/system-header/system-header.component.js'
+import UserHeader from '../components/user-header/user-header.component.js'
 
+/**
+  * Exibe uma busca avançada por profissionais em diferentes fontes,
+  * como no banco de currículos da VAGAS,
+  * banco de currículos da empresa (BCE),
+  * ou nos colaboradores atuais da empresa.
+  */
 const Profissionais = () => (
   <Page>
     <Head>
       <title>Profissionais - { process.env.NEXT_PUBLIC_APP_NAME }</title>
     </Head>
 
-    <SystemHeader />
+    <UserHeader />
 
     <Page.Header>
       <h2>Profissionais</h2>

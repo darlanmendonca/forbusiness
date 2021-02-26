@@ -34,7 +34,7 @@ npm run vercel -- dev
 
 ## Problemas encontrados
 
-A seguir, você encontra uma lista em progresso, com os problemas de experiência encontrados no VAGAS For business.
+A seguir, você encontra uma lista em progresso, com os problemas de experiência encontrados no VAGAS for business.
 
 ### Títulos da aba
 

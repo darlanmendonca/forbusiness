@@ -1,14 +1,20 @@
 import Page from '../components/page/page.component.js'
 import Head from 'next/head'
-import SystemHeader from '../components/system-header/system-header.component.js'
+import UserHeader from '../components/user-header/user-header.component.js'
 
+/**
+  * Exibe relatórios com base no
+  * banco de currículos da empresa (BCE),
+  * ou nas vagas da empresa.
+  * Também permite criar relatórios personalizados.
+  */
 const Relatorios = () => (
   <Page>
     <Head>
       <title>Relatórios - { process.env.NEXT_PUBLIC_APP_NAME }</title>
     </Head>
 
-    <SystemHeader />
+    <UserHeader />
 
     <Page.Header>
       <h2>Relatórios</h2>

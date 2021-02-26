@@ -1,14 +1,18 @@
 import Page from '../components/page/page.component.js'
 import Head from 'next/head'
-import SystemHeader from '../components/system-header/system-header.component.js'
+import UserHeader from '../components/user-header/user-header.component.js'
 
+/**
+  * Exibe a lista de vagas, com filtros de pesquisa,
+  * e permite baseado nas permissões do usuário, publicar e editar vagas.
+  */
 const Vagas = () => (
   <Page>
     <Head>
       <title>Vagas - { process.env.NEXT_PUBLIC_APP_NAME }</title>
     </Head>
 
-    <SystemHeader />
+    <UserHeader />
 
     <Page.Header>
       <h2>Vagas</h2>
