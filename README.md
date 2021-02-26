@@ -16,11 +16,14 @@ npm run dev
 
 Se preferir utilizar automaticamente as variáveis de ambiente provisionadas pela Vercel, utilize o `vercel` cli (necessário uma conta de usuário, que você pode criar em [vercel.com/signup](https://vercel.com/signup). Você também pode ler aqui a [documentação completa do vercel cli](https://vercel.com/docs/cli#commands/dev).
 
-Mas basicamente, vocé deve logar, baixar as variaveis de ambiente, e startar o projeto, assim:
+Mas basicamente, vocé deve logar, linkar o projeto, baixar as variaveis de ambiente, e startar o projeto, assim:
 
 ```sh
 # loga na conta de usuário
 npm run vercel -- login
+
+# linka o repo ao projeto na vercel
+npm run vercel -- link
 
 # baixa as variáveis de ambiente de desenvolvimento
 npm run vercel -- env pull
