@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { NavigationLink } from '../main-header/main-header.style.js'
 
 export const Container = styled.div`
   display: inline-block;
@@ -7,21 +6,6 @@ export const Container = styled.div`
   top: 50%;
   left: 50%;
 `
-
-export const Button = styled(NavigationLink)`
-  background: none;
-  border: 0;
-  cursor: pointer;
-  line-height: 1em;
-
-  :after {visibility: hidden}
-
-  box-icon {
-    transform: translate(.2em, .45em);
-  }
-`
-
-Button.defaultProps = { as: 'button' }
 
 export const MenuList = styled.ul`
   list-style: none;
@@ -41,9 +25,11 @@ export const MenuList = styled.ul`
   font-family: var(--primary-font);
   transform: translate(25px, 30px);
   box-sizing: border-box;
+  transition: opacity var(--fast) ease;
 
   &[hidden] {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
   }
 
   a {

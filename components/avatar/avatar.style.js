@@ -61,6 +61,7 @@ export const Image = styled.div`
     pointer-events: none;
     white-space: nowrap;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    transition: opacity var(--fast) ease;
   }
 
   :hover, :focus {

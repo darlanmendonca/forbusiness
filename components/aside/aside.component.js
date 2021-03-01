@@ -1,4 +1,4 @@
-import { Container, Title, CloseButton } from './aside.style.js'
+import { Container, Content, Title, CloseButton } from './aside.style.js'
 import Icon from '../icon/icon.component.js'
 
 const slugify = (string = '') => string
@@ -8,27 +8,29 @@ const slugify = (string = '') => string
   .toLowerCase()
 
 const Aside = ({ children, title, controller }) => (
-  <Container
-    hidden={ !controller.isVisible }
-    aria-modal='true'
-    aria-describedby={ slugify(title).concat('title') }
-  >
-    <Title id={ slugify(title).concat('title') }>{ title }</Title>
-
-    <CloseButton
-      aria-label='Fechar'
-      onClick={ controller.hide }
-      ref={ controller.closeButtonRef }
+  <Container hidden={ !controller.isVisible }>
+    <Content
+      hidden={ !controller.isVisible }
+      aria-modal='true'
+      aria-describedby={ slugify(title).concat('-title') }
     >
-      <Icon
-        name='x-circle'
-        color='var(--primary)'
-        type='solid'
-        size='34px'
-      />
-    </CloseButton>
+      <Title id={ slugify(title).concat('-title') }>{ title }</Title>
 
-    { children }
+      <CloseButton
+        aria-label='Fechar'
+        onClick={ controller.hide }
+        ref={ controller.closeButtonRef }
+      >
+        <Icon
+          name='x-circle'
+          color='var(--primary)'
+          type='solid'
+          size='34px'
+        />
+      </CloseButton>
+
+      { children }
+    </Content>
   </Container>
 )
 

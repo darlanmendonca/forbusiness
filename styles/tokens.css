@@ -20,7 +20,7 @@ body {
   --elevation: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 
   /* motion */
-  --fast: all .2s ease;
+  --fast: .2s;
 }
 
 
@@ -38,6 +38,6 @@ body {
 /* reduced motion */
 @media (prefers-reduced-motion) {
   body {
-    --fast: none;
+    --fast: 0;
   }
 }

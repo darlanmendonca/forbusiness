@@ -1,4 +1,4 @@
-import { List, Button, MenuList, Container } from './menu.style.js'
+import { List, MenuList, Container } from './menu.style.js'
 import Link from 'next/link'
 import { string, node, object } from 'prop-types'
 

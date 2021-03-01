@@ -53,7 +53,7 @@ export const NavigationLink = styled.a`
     position: absolute;
     top: 108%;
     transform: translate3d(-50%, 0, 0);
-    transition: var(--fast);
+    transition: all var(--fast) ease;
     width: 4px;
     will-change: transform;
   }
@@ -91,6 +91,7 @@ export const Button = styled.button`
     pointer-events: none;
     white-space: nowrap;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+    transition: opacity var(--fast) ease;
   }
 
   :hover, :focus {

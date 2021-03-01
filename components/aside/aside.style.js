@@ -1,9 +1,23 @@
 import styled from '@emotion/styled'
 
-export const Container = styled.aside`
+export const Container = styled.div`
   position: fixed;
-  right: 0;
   top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+
+  &[hidden] {
+    pointer-events: none;
+    display: block;
+  }
+`
+
+export const Content = styled.aside`
+  position: absolute;
+  top: 0;
+  right: 0;
   bottom: 0;
   width: 380px;
   max-width: 100vw;
@@ -11,12 +25,14 @@ export const Container = styled.aside`
   box-shadow: var(--elevation);
   margin: 0;
   padding: 20px;
-  z-index: 10;
   box-sizing: border-box;
   box-shadow: -1px 0 3px 0 rgba(0, 0, 0, 0.2);
+  transform: translateX(0);
+  transition: all var(--fast) ease;
 
   &[hidden] {
-    display: none;
+    display: block;
+    transform: translateX(100%);
   }
 `
 
