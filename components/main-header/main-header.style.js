@@ -53,7 +53,7 @@ export const NavigationLink = styled.a`
     position: absolute;
     top: 108%;
     transform: translate3d(-50%, 0, 0);
-    transition: all .2s ease;
+    transition: var(--fast);
     width: 4px;
     will-change: transform;
   }

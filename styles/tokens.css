@@ -18,8 +18,13 @@ body {
 
   /* shadow */
   --elevation: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+
+  /* motion */
+  --fast: all .2s ease;
 }
 
+
+/* dark mode */
 @media (prefers-color-scheme: dark) {
   body {
     --background: #0d1117;
@@ -27,5 +32,12 @@ body {
     --primary: white;
     --secondary: #343a40;
     --tertiary: #212529;
+  }
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion) {
+  body {
+    --fast: none;
   }
 }
