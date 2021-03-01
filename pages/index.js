@@ -20,7 +20,6 @@ const Home = () => {
       <Page.Header>
         <Avatar
           label={ user.firstname }
-          as='button'
           image={ user.image }
           size='17px'
         />

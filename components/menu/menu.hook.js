@@ -25,6 +25,7 @@ export const useMenu = () => {
   return {
     toggle,
     show,
+    hide,
     isVisible,
     buttonProps,
   }

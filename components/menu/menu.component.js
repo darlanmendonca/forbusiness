@@ -5,21 +5,17 @@ import { string, node, object } from 'prop-types'
 /** O componente `Menu` exibe um menu contextual ao clicar no botão,
   * contendo opções relacionadas.
   */
-const Menu = ({ label, children, controller }) => {
-  const { isVisible } = controller
-
-  return (
-    <Container>
-      <MenuList
-        role='menu'
-        hidden={ !isVisible }
-        aria-label={ label }
-      >
-        { children }
-      </MenuList>
-    </Container>
-  )
-}
+const Menu = ({ label, children, controller }) => (
+  <Container>
+    <MenuList
+      role='menu'
+      hidden={ !controller.isVisible }
+      aria-label={ label }
+    >
+      { children }
+    </MenuList>
+  </Container>
+)
 
 export default Menu
 

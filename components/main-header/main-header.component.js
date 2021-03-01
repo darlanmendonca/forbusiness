@@ -58,8 +58,8 @@ MainHeader.Link = ({ label, href }) => {
   * O MainHeader.Button exibe um botão com ícone e tooltip,
   * posicionado de forma secundária visualmente.
   */
-MainHeader.Button = ({ label, icon, solid }) => (
-  <Button aria-label={ label }>
+MainHeader.Button = ({ label, icon, solid, ...props }) => (
+  <Button aria-label={ label } { ...props }>
     <Icon
       aria-hidden='true'
       name={ icon }
