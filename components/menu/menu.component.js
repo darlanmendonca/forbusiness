@@ -1,31 +1,19 @@
 import { List, Button, MenuList, Container } from './menu.style.js'
-import { useMenu } from './menu.hook.js'
 import Link from 'next/link'
-import Icon from '../icon/icon.component.js'
-import { string, node } from 'prop-types'
+import { string, node, object } from 'prop-types'
 
 /** O componente `Menu` exibe um menu contextual ao clicar no botão,
   * contendo opções relacionadas.
   */
-const Menu = ({ label, children }) => {
-  const { isVisible, toggleVisibility } = useMenu()
+const Menu = ({ label, children, controller }) => {
+  const { isVisible } = controller
 
   return (
     <Container>
-      <Button
-        role='menuitem'
-        aria-expanded={ isVisible }
-        aria-haspopup='true'
-        onClick={ toggleVisibility }
-      >
-        { label }
-        <Icon name='chevron-down' color='white' />
-      </Button>
-
       <MenuList
         role='menu'
         hidden={ !isVisible }
-        aria-label={label}
+        aria-label={ label }
       >
         { children }
       </MenuList>
@@ -41,6 +29,9 @@ Menu.propTypes = {
 
   // Define as opções do menu
   children: node,
+
+  // Define um controlador de visibilidade externo ao menu utilizando o hook useMenu.
+  controller: object,
 }
 
 /**

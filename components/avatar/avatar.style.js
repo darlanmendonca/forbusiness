@@ -52,7 +52,7 @@ export const Image = styled.div`
     position: absolute;
     top: 100%;
     left: 50%;
-    transform:  translate(-50%, 2px);
+    transform:  translate(-50%, 6px);
     background: var(--foreground);
     color: var(--primary);
     padding: 4px 8px;
@@ -65,5 +65,9 @@ export const Image = styled.div`
 
   :hover, :focus {
     :after {opacity: 1}
+  }
+
+  &[aria-expanded="true"] {
+    :after {opacity: 0}
   }
 `

@@ -3,8 +3,9 @@ import { NavigationLink } from '../main-header/main-header.style.js'
 
 export const Container = styled.div`
   display: inline-block;
-  position: relative;
-  /*height: 44px;*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
 `
 
 export const Button = styled(NavigationLink)`
@@ -25,9 +26,8 @@ Button.defaultProps = { as: 'button' }
 export const MenuList = styled.ul`
   list-style: none;
   padding: 0;
-  position: absolute;
   margin: 0;
-
+  text-align: left;
   background: var(--foreground);
   border-radius: 4px;
   display: inline-flex;
@@ -39,7 +39,7 @@ export const MenuList = styled.ul`
   right: 0;
   line-height: 24px;
   font-family: var(--primary-font);
-  transform: translate(-23px, 0);
+  transform: translate(25px, 30px);
   box-sizing: border-box;
 
   &[hidden] {
@@ -52,7 +52,7 @@ export const MenuList = styled.ul`
     color: var(--primary);
     text-decoration: none;
 
-    :hover {
+    :hover, :focus {
       color: var(--professionals-color);
     }
   }

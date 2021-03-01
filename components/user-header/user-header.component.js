@@ -1,7 +1,8 @@
 import MainHeader from '../main-header/main-header.component'
 import { useUser } from '../../hooks/user/user.hook.js'
 import Avatar from '../avatar/avatar.component.js'
-// import Menu from '../menu/menu.component.js'
+import Menu from '../menu/menu.component.js'
+import { useMenu } from '../menu/menu.hook.js'
 
 /**
   * O componente `UserHeader` exibe o links e opções de usuário,
@@ -9,6 +10,7 @@ import Avatar from '../avatar/avatar.component.js'
   */
 const UserHeader = () => {
   const user = useUser()
+  const userOptions = useMenu()
 
   return (
     <MainHeader>
@@ -28,23 +30,25 @@ const UserHeader = () => {
       <Avatar
         label={ user.firstname }
         aria-label='Opções de usuário'
-        as='button'
         image={ user.image }
         size='.75rem'
         style={{ transform: 'translateY(-1rem)', marginLeft: 8 }}
         tooltip
-      />
-
-      {/* <Menu label={ user.firstname }> */}
-      {/*   <Menu.Item */}
-      {/*     label='Alterar dados' */}
-      {/*     href='/editar-dados' */}
-      {/*   /> */}
-      {/*   <Menu.Item */}
-      {/*     label='Sair' */}
-      {/*     href='/sair' */}
-      {/*   /> */}
-      {/* </Menu> */}
+        as='button'
+        onClick={ userOptions.toggle }
+        { ...userOptions.buttonProps }
+      >
+        <Menu controller={ userOptions }>
+          <Menu.Item
+            label='Alterar dados'
+            href='/editar-dados'
+          />
+          <Menu.Item
+            label='Sair'
+            href='/sair'
+          />
+        </Menu>
+      </Avatar>
     </MainHeader>
   )
 }
