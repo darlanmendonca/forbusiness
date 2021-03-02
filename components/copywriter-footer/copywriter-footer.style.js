@@ -11,6 +11,11 @@ export const Footer = styled.footer`
   font-size: 12px;
   line-height: 34px;
   width: 100%;
+  white-space: nowrap;
+
+  @media (max-width: 700px) {
+    text-align: center;
+  }
 
   img {
     transform: translateY(6px);

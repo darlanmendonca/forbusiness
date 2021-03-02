@@ -6,10 +6,8 @@ import { Container } from './charts.style.js'
   */
 const Charts = () => (
   <Container>
-    <Card subtitle='SLA de vagas'>
-    </Card>
-    <Card subtitle='Novas candidaturas'>
-    </Card>
+    <Card subtitle='SLA de vagas' />
+    <Card subtitle='Novas candidaturas' />
   </Container>
 )
 

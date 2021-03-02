@@ -25,15 +25,17 @@ const Home = () => {
         />
         <h2 style={{ marginTop: 15 }}>Olá { user.firstname }</h2>
         <p>
-          Você não tem vagas abertas na <strong>{ user.company }</strong>.
+          Você não tem vagas abertas na <wbr /><strong>{ user.company }</strong>.
+          <wbr />
           <Link href='/vagas' passHref>
             <a>Acompanhar vagas</a>
           </Link>
         </p>
       </Page.Header>
 
+      <Charts />
+
       <Page.Content>
-        <Charts />
         <Card title='Suas vagas' style={{ height: 40 * 10 }} />
       </Page.Content>
     </Page>

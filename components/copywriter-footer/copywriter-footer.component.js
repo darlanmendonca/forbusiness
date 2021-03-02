@@ -16,8 +16,9 @@ const CopywriterFooter = () => {
         width={ 86 }
         height={ 24 }
       />
-      © { currentYear } VAGAS Tecnologia. Todos os direitos reservados.
+      © { currentYear } VAGAS Tecnologia. <wbr />Todos os direitos reservados.
       {' '}
+      <wbr />
       <Link href='/termos-de-uso'>
         <a>Termos de uso</a>
       </Link>

@@ -24,11 +24,13 @@ export const useSegmentHeader = () => {
     },
   ]
 
-  useEffect(() => {
+  const scrollToActiveLink = () => {
     if (!navigationRef.current) return
     const activeLink = navigationRef.current.querySelector('a:not([href])')
     navigationRef.current.scrollLeft = activeLink.offsetLeft
-  }, [])
+  }
+
+  useEffect(scrollToActiveLink, [])
 
   return {
     segments,

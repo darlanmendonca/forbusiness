@@ -54,5 +54,13 @@ export const Header = styled.header`
     line-height: 1.4;
     margin: 10px 0 0;
     padding: 0 20px;
+
+    @media (max-width: 700px) {
+      text-align: center;
+    }
+  }
+
+  strong, a {
+    white-space: nowrap;
   }
 `

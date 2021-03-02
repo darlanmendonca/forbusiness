@@ -8,6 +8,7 @@ export const Container = styled.div`
   box-shadow: var(--elevation);
   border-radius: 2px;
   padding: 1em;
+  box-sizing: border-box;
 `
 
 export const Title = styled.h2`
