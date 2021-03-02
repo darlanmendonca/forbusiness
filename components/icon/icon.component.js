@@ -1,4 +1,4 @@
-import { string, number, oneOf } from 'prop-types'
+import { string, number, oneOf, oneOfType } from 'prop-types'
 
 /**
   * O componente `Icon` exibe ícones baseado na lib boxicons.
@@ -21,7 +21,7 @@ Icon.propTypes = {
   color: string,
 
   // Define o tamanho do ícone
-  size: oneOf([ string, number ]),
+  size: oneOfType([ string, number ]),
 }
 
 

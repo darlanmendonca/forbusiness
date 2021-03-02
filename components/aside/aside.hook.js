@@ -9,29 +9,16 @@ export const useAside = () => {
   const show = ()  => setIsVisible(true)
   const hide = () => setIsVisible(false)
 
-  useEffect(() => {
+  const autoFocus = () => {
     if (isVisible) {
       setOpenButton(document.activeElement)
       closeButtonRef.current?.focus()
     } else {
       openButton?.focus()
     }
-  }, [isVisible])
+  }
 
-//   const autoHideMenuOnBlur = event => {
-//     setTimeout(() => {
-//       const hasParentMenu = document.activeElement.closest('[role="menu"]')
-//
-//       if (!hasParentMenu) hide()
-//     }, 0)
-//   }
-
-  // const buttonProps = {
-  //   role: 'menuitem',
-  //   'aria-expanded': isVisible,
-  //   'aria-haspopup': 'true',
-  //   onBlur: autoHideMenuOnBlur,
-  // }
+  useEffect(autoFocus, [isVisible])
 
   return {
     toggle,
@@ -39,6 +26,5 @@ export const useAside = () => {
     isVisible,
     hide,
     closeButtonRef,
-    // buttonProps,
   }
 }

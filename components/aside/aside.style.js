@@ -9,8 +9,7 @@ export const Container = styled.div`
   z-index: 10;
 
   &[hidden] {
-    pointer-events: none;
-    display: block;
+    display: none;
   }
 `
 
@@ -27,12 +26,11 @@ export const Content = styled.aside`
   padding: 20px;
   box-sizing: border-box;
   box-shadow: -1px 0 3px 0 rgba(0, 0, 0, 0.2);
-  transform: translateX(0);
-  transition: all var(--fast) ease;
+  /*transform: translateX(0);*/
+  /*transition: all var(--fast) ease;*/
 
   &[hidden] {
-    display: block;
-    transform: translateX(100%);
+    display: none;
   }
 `
 
