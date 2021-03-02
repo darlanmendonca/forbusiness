@@ -55,7 +55,7 @@ const UserHeader = () => {
               />
               <Menu.Item
                 label='Sair'
-                href='/sair'
+                href='/login'
               />
             </Menu>
           </Avatar>

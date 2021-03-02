@@ -8,6 +8,7 @@ export const Container = styled.div`
   box-shadow: var(--elevation);
   border-radius: 2px;
   padding: 1em;
+  max-width: 100%;
   box-sizing: border-box;
 `
 
