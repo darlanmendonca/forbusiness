@@ -11,7 +11,7 @@ const CopywriterFooter = () => {
   return (
     <Footer>
       <img
-        aria-label={ `Logotipo ${ process.env.NEXT_PUBLIC_APP_NAME }` }
+        aria-label={ 'Logotipo VAGAS' }
         src='vagas.svg'
         width={ 86 }
         height={ 24 }
