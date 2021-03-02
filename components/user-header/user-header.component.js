@@ -25,12 +25,13 @@ const UserHeader = () => {
         <MainHeader.Link label='Profissionais' href='/profissionais' />
         <MainHeader.Link label='Relatórios' href='/relatorios' />
         <MainHeader.Link label='Configurações' href='/configuracoes' />
+        <MainHeader.Link label='Marketplace' href='/marketplace' />
 
         <MainHeader.Button label='Buscar profissionais' icon='search' />
         <MainHeader.Button label='Novidades' icon='megaphone' solid onClick={ news.show } />
         <MainHeader.Button label='Mensagens' icon='message-square-detail' solid onClick={ messages.show } />
-        <MainHeader.Button label='Entrevistas online' icon='videos' solid />
-        <MainHeader.Button label='Marketplace' icon='store' solid />
+        {/* <MainHeader.Button label='Entrevistas online' icon='videos' solid /> */}
+        {/* <MainHeader.Button label='Marketplace' icon='store' solid /> */}
         <MainHeader.Button label='Ajuda' icon='help-circle' solid onClick={ help.show } />
 
         <Avatar
