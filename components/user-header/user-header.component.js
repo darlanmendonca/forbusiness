@@ -20,42 +20,46 @@ const UserHeader = () => {
   return (
     <>
       <MainHeader>
-        <MainHeader.Link label='Início' href='/'  />
-        <MainHeader.Link label='Vagas' href='/vagas' />
-        <MainHeader.Link label='Profissionais' href='/profissionais' />
-        <MainHeader.Link label='Relatórios' href='/relatorios' />
-        <MainHeader.Link label='Configurações' href='/configuracoes' />
-        <MainHeader.Link label='Marketplace' href='/marketplace' />
+        <MainHeader.Navigation>
+          <MainHeader.Link label='Início' href='/'  />
+          <MainHeader.Link label='Vagas' href='/vagas' />
+          <MainHeader.Link label='Profissionais' href='/profissionais' />
+          <MainHeader.Link label='Relatórios' href='/relatorios' />
+          <MainHeader.Link label='Configurações' href='/configuracoes' />
+          <MainHeader.Link label='Marketplace' href='/marketplace' />
+        </MainHeader.Navigation>
 
-        <MainHeader.Button label='Buscar profissionais' icon='search' />
-        <MainHeader.Button label='Novidades' icon='megaphone' solid onClick={ news.show } />
-        <MainHeader.Button label='Mensagens' icon='message-square-detail' solid onClick={ messages.show } />
-        {/* <MainHeader.Button label='Entrevistas online' icon='videos' solid /> */}
-        {/* <MainHeader.Button label='Marketplace' icon='store' solid /> */}
-        <MainHeader.Button label='Ajuda' icon='help-circle' solid onClick={ help.show } />
+        <MainHeader.Options>
+          <MainHeader.Button label='Buscar profissionais' icon='search' />
+          <MainHeader.Button label='Novidades' icon='megaphone' solid onClick={ news.show } />
+          <MainHeader.Button label='Mensagens' icon='message-square-detail' solid onClick={ messages.show } />
+          <MainHeader.Button label='Entrevistas online' icon='videos' solid />
+          <MainHeader.Button label='Marketplace' icon='store' solid />
+          <MainHeader.Button label='Ajuda' icon='help-circle' solid onClick={ help.show } />
 
-        <Avatar
-          label={ user.firstname }
-          aria-label='Opções de usuário'
-          image={ user.image }
-          size='.75rem'
-          style={{ transform: 'translateY(-1rem)', marginLeft: 8 }}
-          tooltip
-          as='button'
-          onClick={ userOptions.toggle }
-          { ...userOptions.buttonProps }
-        >
-          <Menu controller={ userOptions }>
-            <Menu.Item
-              label='Alterar dados'
-              href='/editar-dados'
-            />
-            <Menu.Item
-              label='Sair'
-              href='/sair'
-            />
-          </Menu>
-        </Avatar>
+          <Avatar
+            label={ user.firstname }
+            aria-label='Opções de usuário'
+            image={ user.image }
+            size='.75rem'
+            style={{ transform: 'translateY(-2px)', marginLeft: 8 }}
+            tooltip
+            as='button'
+            onClick={ userOptions.toggle }
+            { ...userOptions.buttonProps }
+          >
+            <Menu controller={ userOptions }>
+              <Menu.Item
+                label='Alterar dados'
+                href='/editar-dados'
+              />
+              <Menu.Item
+                label='Sair'
+                href='/sair'
+              />
+            </Menu>
+          </Avatar>
+        </MainHeader.Options>
       </MainHeader>
 
       <Aside title='Novidades' controller={ news }>

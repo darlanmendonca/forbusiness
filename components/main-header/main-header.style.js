@@ -5,7 +5,6 @@ export const Header = styled.header`
   top: 0;
   z-index: 10;
   background: var(--brand-gradient);
-  /*box-shadow: var(--elevation);*/
 `
 
 export const Container = styled.div`
@@ -21,7 +20,7 @@ export const Container = styled.div`
 `
 
 export const Navigation = styled.nav`
-  @media (max-width: 1023px) {
+  @media (max-width: 1200px) {
     display: none;
   }
 `
@@ -37,7 +36,11 @@ export const NavigationLink = styled.a`
   line-height: 66px;
   height: 44px;
 
-  :hover:after, &[data-active]:after {
+  :last-of-type {
+    margin-right: 0;
+  }
+
+  :hover:after, &:not([href]):after {
     opacity: 1;
     transform: translate3d(-50%, 0, 0);
     width: 100%;
@@ -59,6 +62,12 @@ export const NavigationLink = styled.a`
   }
 `
 
+export const Options = styled.div`
+  @media (max-width: 1200px) {
+    display: none;
+  }
+`
+
 export const Button = styled.button`
   border: 0;
   background: none;
@@ -67,19 +76,15 @@ export const Button = styled.button`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(6px);
+  transform: translateY(0);
   cursor: pointer;
   position: relative;
-
-  :first-of-type {
-    margin-left: 54px;
-  }
 
   :after {
     content: attr(aria-label);
     font-size: 13px;
     line-height: 1.2em;
-    position: absolute;
+    position: fixed;
     top: 100%;
     left: 50%;
     transform:  translate(-50%, 2px);
@@ -96,5 +101,11 @@ export const Button = styled.button`
 
   :hover, :focus {
     :after {opacity: 1}
+  }
+`
+
+export const MenuButton = styled(Button)`
+  @media (min-width: 1201px) {
+    display: none;
   }
 `

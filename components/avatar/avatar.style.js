@@ -49,7 +49,7 @@ export const Image = styled.div`
   :after {
     font-size: 13px;
     line-height: 1.2em;
-    position: absolute;
+    position: fixed;
     top: 100%;
     left: 50%;
     transform:  translate(-50%, 6px);

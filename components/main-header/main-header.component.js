@@ -1,35 +1,54 @@
-import { Header, Container, Navigation, NavigationLink, Button } from './main-header.style.js'
+import { Header, Container, Navigation, NavigationLink, Options, Button, MenuButton } from './main-header.style.js'
 import Link from 'next/link'
 import Icon from '../icon/icon.component.js'
 import { useRouter } from 'next/router'
+import Aside from '../aside/aside.component.js'
+import { useAside } from '../aside/aside.hook.js'
 import { node } from 'prop-types'
 
 /**
   * O componente `MainHeader` exibe o header de navegação principal.
   * O mesmo é fixado ao scrollar a página, de forma que é sempre visível.
   * Em ambientes mobile, os links de navegação, bem como outras opções,
-  * são exibidas através de um menu lateral.
+  * são exibidas em um menu lateral.
   */
-const MainHeader = ({ children }) => (
-  <Header aria-label='Principal'>
-    <Container>
-      <Link href='/'>
-        <a aria-label={ process.env.NEXT_PUBLIC_APP_NAME }>
-          <img
-            src='forbusiness.svg'
-            width={ 203 }
-            aria-hidden='true'
-            draggable='false'
-          />
-        </a>
-      </Link>
+const MainHeader = ({ children }) => {
+  const mobileMenu = useAside()
 
-      <Navigation aria-label='Principal'>
+  return (
+    <>
+      <Header aria-label='Principal'>
+        <Container>
+          <Link href='/'>
+            <a aria-label={ process.env.NEXT_PUBLIC_APP_NAME }>
+              <img
+                src='forbusiness.svg'
+                width={ 203 }
+                aria-hidden='true'
+                draggable='false'
+              />
+            </a>
+          </Link>
+
+          { children }
+
+          <MenuButton aria-label='Menu' onClick={ mobileMenu.show }>
+            <Icon
+              name='menu'
+              aria-hidden='true'
+              color='white'
+              size='32px'
+            />
+          </MenuButton>
+        </Container>
+      </Header>
+
+      <Aside title='Menu' controller={ mobileMenu }>
         { children }
-      </Navigation>
-    </Container>
-  </Header>
-)
+      </Aside>
+    </>
+  )
+}
 
 export default MainHeader
 
@@ -39,6 +58,26 @@ MainHeader.propTypes = {
 }
 
 /**
+  * O MainHeader.Navigation exibe links de navegação,
+  * visível em telas maiores que 1200px de largura.
+  * Em telas menores é exibido no menu lateral.
+  */
+MainHeader.Navigation = ({ children }) => (
+  <Navigation aria-label='Principal'>
+    { children }
+  </Navigation>
+)
+
+/**
+  * O MainHeader.Navigation exibe botões para funções complementares,
+  * visível em telas maiores que 1200px de largura.
+  * Em telas menores é exibido no menu lateral.
+  */
+MainHeader.Options = ({ children }) => (
+  <Options>{ children }</Options>
+)
+
+/**
   * O MainHeader.Link exibe um link de navegação
   * e informa ao usuário se é um link ativo.
   */
@@ -46,7 +85,7 @@ MainHeader.Link = ({ label, href }) => {
   const router = useRouter()
 
   return router.pathname === href
-    ? <NavigationLink data-active>{ label }</NavigationLink>
+    ? <NavigationLink>{ label }</NavigationLink>
     : (
     <Link href={ href } passHref>
       <NavigationLink>{ label }</NavigationLink>

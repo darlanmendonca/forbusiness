@@ -24,6 +24,34 @@ export const Container = styled.div`
     transform: translateX(100%);
     transition: transform var(--fast) ease, visibility 0s .3s;
   }
+
+  nav {
+    display: block;
+    margin-top: 40px;
+
+    a {
+      display: block;
+      line-height: 4em;
+      height: 4em;
+      padding: 0 10px;
+      background-color: transparent;
+      margin: 10px 0 0;
+      border-radius: 4px;
+      transition: background-color var(--fast) ease;
+
+      :after {
+        content: none;
+      }
+
+      :hover {
+        background-color: var(--secondary);
+      }
+
+      :not([href]) {
+        background-color: var(--accent);
+      }
+    }
+  }
 `
 
 export const Title = styled.h2`

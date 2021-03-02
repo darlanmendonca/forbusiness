@@ -41,7 +41,7 @@ export const Container = styled.div`
     & > div {
       flex: 1;
       height: 310px;
-      margin-right: 10px;
+      margin-right: 1em;
 
       :last-of-type {
         margin-right: 0;
