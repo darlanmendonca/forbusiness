@@ -1,4 +1,8 @@
+import { useEffect, useRef } from 'react'
+
 export const useSegmentHeader = () => {
+  const navigationRef = useRef()
+
   const segments = [
     {
       id: 'institutional',
@@ -20,5 +24,14 @@ export const useSegmentHeader = () => {
     },
   ]
 
-  return segments
+  useEffect(() => {
+    if (!navigationRef.current) return
+    const activeLink = navigationRef.current.querySelector('a:not([href])')
+    navigationRef.current.scrollLeft = activeLink.offsetLeft
+  }, [])
+
+  return {
+    segments,
+    navigationRef,
+  }
 }

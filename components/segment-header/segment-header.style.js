@@ -5,10 +5,13 @@ export const Navigation = styled.nav`
   align-items: center;
   display: flex;
   margin: 0 auto;
-  padding: 0px 10px;
+  padding: 0px;
   width: 100%;
   max-width: 1200px;
   box-sizing: border-box;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
 `
 
 const segmentColor = props => props.color
@@ -17,7 +20,7 @@ export const Link = styled.a`
   font-family: var(--primary-font);
   font-size: 15px;
   line-height: 20px;
-  margin-right: 12px;
+  padding: 0 12px;
   position: relative;
   text-decoration: none;
   color: ${ segmentColor };
@@ -25,7 +28,7 @@ export const Link = styled.a`
 
   :not(:last-of-type) {
     border-right: 1px solid var(--secondary);
-    padding-right: 12px;
+    /*padding-right: 12px;*/
   }
 
   :not([href]):after {

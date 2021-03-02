@@ -7,7 +7,7 @@ import { oneOf } from 'prop-types'
   * segmentos da vagas, sendo Institucional, Candidatos, e Profissionais.
   */
 const SegmentHeader = ({ current }) => {
-  const segments = useSegmentHeader()
+  const { segments, navigationRef } = useSegmentHeader()
 
   const toLinks = segment => (
     <Link
@@ -21,7 +21,7 @@ const SegmentHeader = ({ current }) => {
   )
 
   return (
-    <Navigation aria-label='Segmentos'>
+    <Navigation aria-label='Segmentos' ref={ navigationRef }>
       { segments.map(toLinks) }
     </Navigation>
   )
