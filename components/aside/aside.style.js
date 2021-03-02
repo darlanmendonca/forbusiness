@@ -4,33 +4,25 @@ export const Container = styled.div`
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10;
-
-  &[hidden] {
-    display: none;
-  }
-`
-
-export const Content = styled.aside`
-  position: absolute;
-  top: 0;
   right: 0;
-  bottom: 0;
   width: 380px;
   max-width: 100vw;
+  z-index: 10;
   background: var(--foreground);
   box-shadow: var(--elevation);
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
   box-shadow: -1px 0 3px 0 rgba(0, 0, 0, 0.2);
-  /*transform: translateX(0);*/
-  /*transition: all var(--fast) ease;*/
+  transition: transform var(--fast) ease;
+  visibility: visible;
+  transform: translateX(0%);
 
   &[hidden] {
-    display: none;
+    visibility: hidden;
+    display: block;
+    transform: translateX(100%);
+    transition: transform var(--fast) ease, visibility 0s .3s;
   }
 `
 

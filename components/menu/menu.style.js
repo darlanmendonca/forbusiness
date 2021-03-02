@@ -25,9 +25,13 @@ export const MenuList = styled.ul`
   font-family: var(--primary-font);
   transform: translate(25px, 30px);
   box-sizing: border-box;
+  transition: opacity var(--fast) ease;
 
   &[hidden] {
-    display: none;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--fast) ease, visibility 0s .3s;
   }
 
   a {

@@ -38,6 +38,6 @@ body {
 /* reduced motion */
 @media (prefers-reduced-motion) {
   body {
-    --fast: 0;
+    --fast: 0s;
   }
 }
