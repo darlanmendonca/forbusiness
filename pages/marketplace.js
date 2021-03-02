@@ -16,7 +16,7 @@ const Marketplace = () => (
 
     <Page.Header>
       <h2>Marketplace</h2>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Essa é sua central de serviços contratados, onde você pode ver quais estão disponíveis e aplicá-los em seu processo seletivo.</p>
     </Page.Header>
 
     <Page.Content>

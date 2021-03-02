@@ -9,9 +9,12 @@ export const Navigation = styled.nav`
   width: 100%;
   max-width: 1200px;
   box-sizing: border-box;
-  white-space: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
+
+  @media (max-width: 700px) {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
 `
 
 const segmentColor = props => props.color

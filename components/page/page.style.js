@@ -6,7 +6,7 @@ export const Container = styled.div`
   min-height: 100vh;
 `
 
-export const Content = styled.main`
+export const Content = styled.div`
   flex: 1;
   margin: 0 auto;
   max-width: 1200px;

@@ -7,23 +7,31 @@ export const Container = styled.div`
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
+  padding-bottom: 10px;
 
   @media (max-width: 700px) {
     overflow-x: auto;
+    overflow-y: hidden;
 
     & > div {
-      display: inline-block;
       height: 240px;
-      min-width: calc(100% - 20px);
+      min-width: calc(100% - 30px);
       margin-right: 10px;
 
       :first-of-type {
-        border-left: 10px solid var(--background);
+        margin-left: 10px;
       }
 
       :last-of-type {
-        border-right: 10px solid var(--background);
+        margin-right: 0;
       }
+    }
+
+    &:after {
+      content: '';
+      min-width: 10px;
+      height: 240px;
+      background: transparent;
     }
   }
 
@@ -33,7 +41,7 @@ export const Container = styled.div`
     & > div {
       flex: 1;
       height: 310px;
-      margin-right: 2em;
+      margin-right: 10px;
 
       :last-of-type {
         margin-right: 0;
