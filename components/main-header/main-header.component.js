@@ -37,7 +37,7 @@ const MainHeader = ({ children }) => {
               name='menu'
               aria-hidden='true'
               color='white'
-              size='32px'
+              size='34px'
             />
           </MenuButton>
         </Container>
