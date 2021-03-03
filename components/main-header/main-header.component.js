@@ -1,4 +1,4 @@
-import { Header, Container, Navigation, NavigationLink, Options, Button, MenuButton } from './main-header.style.js'
+import { Header, Container, Navigation, NavigationLink, Options, Button, MenuButton, MenuHeader } from './main-header.style.js'
 import Link from 'next/link'
 import Icon from '../icon/icon.component.js'
 import { useRouter } from 'next/router'

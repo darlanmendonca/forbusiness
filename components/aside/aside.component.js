@@ -21,8 +21,8 @@ const Aside = ({ children, title, controller }) => (
       ref={ controller.closeButtonRef }
     >
       <Icon
-        name='x-circle'
-        color='var(--primary)'
+        name='x'
+        color='white'
         type='solid'
         size='34px'
       />

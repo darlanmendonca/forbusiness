@@ -62,7 +62,7 @@ export const NavigationLink = styled.a`
   }
 `
 
-export const Options = styled.div`
+export const Options = styled.aside`
   @media (max-width: 1200px) {
     display: none;
   }
