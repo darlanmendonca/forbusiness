@@ -26,7 +26,7 @@ export const useSegmentHeader = () => {
 
   const scrollToActiveLink = () => {
     if (!navigationRef.current) return
-    const activeLink = navigationRef.current.querySelector('a:not([href])')
+    const activeLink = navigationRef.current.querySelector('a[aria-current="page"]')
     navigationRef.current.scrollLeft = activeLink.offsetLeft
   }
 

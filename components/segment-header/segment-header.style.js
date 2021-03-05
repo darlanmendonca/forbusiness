@@ -34,7 +34,7 @@ export const Link = styled.a`
     /*padding-right: 12px;*/
   }
 
-  :not([href]):after {
+  &[aria-current="page"]:after {
     content: '';
     border-bottom: 6px solid;
     border-left: 6px solid transparent;

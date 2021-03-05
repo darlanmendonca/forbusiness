@@ -85,7 +85,7 @@ MainHeader.Link = ({ label, href }) => {
   const router = useRouter()
 
   return router.pathname === href
-    ? <NavigationLink>{ label }</NavigationLink>
+    ? <NavigationLink aria-current="page" href={ href }>{ label }</NavigationLink>
     : (
     <Link href={ href } passHref>
       <NavigationLink>{ label }</NavigationLink>

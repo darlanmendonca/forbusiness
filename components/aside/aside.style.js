@@ -57,7 +57,7 @@ export const Container = styled.div`
         content: none;
       }
 
-      :not([href]) {
+      &[aria-current="page"] {
         background-color: var(--accent);
       }
     }

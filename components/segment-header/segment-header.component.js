@@ -12,9 +12,9 @@ const SegmentHeader = ({ current }) => {
   const toLinks = segment => (
     <Link
       key={ segment.id }
-      href={ current === segment.id ? null : segment.url }
+      href={ segment.url }
       color={ segment.color }
-      active={ current === segment.id }
+      aria-current={ current === segment.id ? 'page' : 'false' }
     >
       { segment.label }
     </Link>

@@ -40,7 +40,7 @@ export const NavigationLink = styled.a`
     margin-right: 0;
   }
 
-  :hover:after, &:not([href]):after {
+  :hover:after, &[aria-current="page"]:after {
     opacity: 1;
     transform: translate3d(-50%, 0, 0);
     width: 100%;
