@@ -6,6 +6,13 @@ import MainHeader from '../main-header/main-header.component'
   */
 const SiteHeader = () => (
   <MainHeader>
+    <MainHeader.Logotype
+      label={ process.env.NEXT_PUBLIC_APP_NAME }
+      href='/'
+      src='forbusiness.svg'
+      width={ 203 }
+    />
+
     <MainHeader.Navigation>
       <MainHeader.Link
         label='Plataforma de Recrutamento e Seleção'

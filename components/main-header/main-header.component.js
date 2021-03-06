@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import Aside from '../aside/aside.component.js'
 import { useAside } from '../aside/aside.hook.js'
 import { node } from 'prop-types'
+import { Children } from 'react'
 
 /**
   * O componente `MainHeader` exibe o header de navegação principal.
@@ -19,17 +20,6 @@ const MainHeader = ({ children }) => {
     <>
       <Header aria-label='Principal'>
         <Container>
-          <Link href='/'>
-            <a aria-label={ process.env.NEXT_PUBLIC_APP_NAME }>
-              <img
-                src='forbusiness.svg'
-                width={ 203 }
-                aria-hidden='true'
-                draggable='false'
-              />
-            </a>
-          </Link>
-
           { children }
 
           <MenuButton aria-label='Menu' onClick={ mobileMenu.show }>
@@ -44,7 +34,10 @@ const MainHeader = ({ children }) => {
       </Header>
 
       <Aside title='Menu' controller={ mobileMenu }>
-        { children }
+        { Children
+            .toArray(children)
+            .filter(child => child.type !== MainHeader.Logotype)
+        }
       </Aside>
     </>
   )
@@ -56,6 +49,23 @@ MainHeader.propTypes = {
   // Define o conteúdo do header
   children: node,
 }
+
+/**
+  * O MainHeader.Logotype define o logotipo (imagem e link) a ser exibido
+  * no canto esquerdo do header.
+  */
+MainHeader.Logotype = ({ href, label, src, width }) => (
+  <Link href={ href }>
+    <a aria-label={ label }>
+      <img
+        src={ src }
+        width={ width }
+        aria-hidden='true'
+        draggable='false'
+      />
+    </a>
+  </Link>
+)
 
 /**
   * O MainHeader.Navigation exibe links de navegação,

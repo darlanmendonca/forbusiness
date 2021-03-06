@@ -20,6 +20,13 @@ const UserHeader = () => {
   return (
     <>
       <MainHeader>
+        <MainHeader.Logotype
+          label={ process.env.NEXT_PUBLIC_APP_NAME }
+          href='/'
+          src='forbusiness.svg'
+          width={ 203 }
+        />
+
         <MainHeader.Navigation>
           <MainHeader.Link label='Início' href='/'  />
           <MainHeader.Link label='Vagas' href='/vagas' />
