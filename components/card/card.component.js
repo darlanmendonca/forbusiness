@@ -1,4 +1,4 @@
-import { Container, Title, Subtitle, Illustration } from './card.style.js'
+import { Container, Title, Subtitle, Illustration, Options } from './card.style.js'
 import { string, node } from 'prop-types'
 
 /**
@@ -34,6 +34,11 @@ Card.propTypes = {
 }
 
 /**
-  * Exibe uma imagem ilustrativa parao card.
+  * Exibe uma imagem ilustrativa para o card.
   */
 Card.Illustration = Illustration
+
+/**
+  * Exibe um header com opções relativas ao card
+  */
+Card.Options = Options

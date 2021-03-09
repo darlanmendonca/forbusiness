@@ -11,7 +11,7 @@ const CopywriterFooter = () => {
   return (
     <Footer>
       <img
-        aria-label={ 'Logotipo VAGAS' }
+        alt={ 'Logotipo VAGAS' }
         src='vagas.svg'
         width={ 86 }
         height={ 24 }

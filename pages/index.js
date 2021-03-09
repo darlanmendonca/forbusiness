@@ -36,7 +36,7 @@ const Home = () => {
       <Charts />
 
       <Page.Content>
-        <Card title='Suas vagas' style={{ height: 40 * 10 }} />
+        <Card title='Suas vagas' style={{ height: 4 * 100 }} />
       </Page.Content>
     </Page>
   )

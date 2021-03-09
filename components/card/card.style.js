@@ -10,6 +10,7 @@ export const Container = styled.div`
   padding: 1em;
   max-width: 100%;
   box-sizing: border-box;
+  position: relative;
 `
 
 export const Title = styled.h2`
@@ -26,4 +27,10 @@ export const Subtitle = styled(Title)`
 export const Illustration = styled.img`
   display: block;
   margin: 0 auto 4em;
+`
+
+export const Options = styled.div`
+  position: absolute;
+  top: -52px;
+  right: 0;
 `

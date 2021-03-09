@@ -17,14 +17,14 @@ const Login = () => (
     <Page.Content style={{ display: 'flex', justifyContent: 'center' }}>
       <div style={{ width: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <img
+          alt='Pessoas trabalhando em formato Home office'
           style={{ maxWidth: '100%', width: '100%' }}
           src='working_together_from_home.svg'
         />
       </div>
       <Card subtitle='Login' style={{
         width: '50%',
-        // margin: '4em 0 0',
-        minHeight: 340
+        minHeight: 340,
       }} />
     </Page.Content>
   </Page>

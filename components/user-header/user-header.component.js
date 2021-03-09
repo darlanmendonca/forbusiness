@@ -1,6 +1,5 @@
 import MainHeader from '../main-header/main-header.component'
 import { useUser } from '../../hooks/user/user.hook.js'
-import Avatar from '../avatar/avatar.component.js'
 import Menu from '../menu/menu.component.js'
 import { useMenu } from '../menu/menu.hook.js'
 import Aside from '../aside/aside.component.js'
@@ -36,28 +35,23 @@ const UserHeader = () => {
           <MainHeader.Link label='Marketplace' href='/marketplace' />
         </MainHeader.Navigation>
 
-        <MainHeader.Options>
+        <MainHeader.Options aria-label='Outros recursos'>
           <MainHeader.Button label='Buscar profissionais' icon='search' />
           <MainHeader.Button label='Novidades' icon='megaphone' solid onClick={ news.show } />
           <MainHeader.Button label='Mensagens' icon='message-square-detail' solid onClick={ messages.show } />
           {/* <MainHeader.Button label='Entrevistas online' icon='videos' solid /> */}
           {/* <MainHeader.Button label='Marketplace' icon='store' solid /> */}
           <MainHeader.Button label='Ajuda' icon='help-circle' solid onClick={ help.show } />
-
-          <Avatar
-            label={ user.firstname }
-            aria-label='Opções de usuário'
+          <MainHeader.AvatarButton
+            label='Opções de usuário'
+            user={ user.firstname }
             image={ user.image }
-            size='.75rem'
-            style={{ transform: 'translateY(-2px)', marginLeft: 8 }}
-            tooltip
-            as='button'
             onClick={ userOptions.toggle }
             { ...userOptions.buttonProps }
           >
             <Menu controller={ userOptions }>
               <Menu.Item
-                label='Alterar dados'
+                label='Editar dados'
                 href='/editar-dados'
               />
               <Menu.Item
@@ -65,21 +59,15 @@ const UserHeader = () => {
                 href='/login'
               />
             </Menu>
-          </Avatar>
+          </MainHeader.AvatarButton>
         </MainHeader.Options>
       </MainHeader>
 
-      <Aside title='Novidades' controller={ news }>
+      <Aside title='Novidades' controller={ news } />
 
-      </Aside>
+      <Aside title='Mensagens' controller={ messages } />
 
-      <Aside title='Mensagens' controller={ messages }>
-
-      </Aside>
-
-      <Aside title='Ajuda' controller={ help }>
-
-      </Aside>
+      <Aside title='Ajuda' controller={ help } />
     </>
   )
 }
