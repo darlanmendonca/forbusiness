@@ -25,6 +25,7 @@ export const Image = styled.div`
   position: relative;
   border: 2px solid white;
   box-sizing: border-box;
+  transform: translateZ(0);
 
   ${({ image }) => !image ? '' : css`
     &:before {

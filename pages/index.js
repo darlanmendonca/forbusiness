@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { useUser } from '../hooks/user/user.hook.js'
 import Card from '../components/card/card.component.js'
 import Charts from '../components/charts/charts.component.js'
+import { useVacancies } from '../hooks/vacancies/vacancies.hook.js'
+import Tags from '../components/tags/tags.component.js'
 
 /**
   * Página inicial, visível apenas para usuários logados.
@@ -12,6 +14,9 @@ import Charts from '../components/charts/charts.component.js'
   */
 const Home = () => {
   const user = useUser()
+  const vacancies = useVacancies()
+  const day = 'numeric'
+  const month = 'long'
 
   return (
     <Page>
@@ -36,7 +41,42 @@ const Home = () => {
       <Charts />
 
       <Page.Content>
-        <Card title='Suas vagas' style={{ height: 4 * 100 }} />
+        <Card title='Suas vagas em andamento' as='ul'>
+          { vacancies
+            .filter(vaga => vaga.owner.firstname === user.firstname)
+            .filter(vaga => vaga.status === 'Em andamento')
+            .map(({ name, location, level, id, owner, status, date }) =>
+              <Card.Item>
+                <Card.Subtitle>
+                  <Avatar
+                    name={ owner.firstname }
+                    image={ owner.image }
+                    size='11px'
+                    style={{ marginRight: 10 }}
+                  />
+
+                  { name } { level } <small>v{ id }</small>
+                </Card.Subtitle>
+
+                <Tags label='Informações da vaga'>
+                  <Tags.Item label='Local de trabalho' color='deepSkyBlue' icon='map'>
+                    { location }
+                  </Tags.Item>
+
+                  <Tags.Item
+                    label='Período de inscrições'
+                    icon='time-five'
+                    color={ status === 'Encerrada' ? 'gold' : 'greenyellow' }
+                  >
+                    { date.open.toLocaleDateString('pt-BR', { day }) }
+                    { ' a ' }
+                    { date.expiration.toLocaleDateString('pt-BR', { day, month }) }
+                  </Tags.Item>
+                </Tags>
+              </Card.Item>
+            )
+          }
+        </Card>
       </Page.Content>
     </Page>
   )

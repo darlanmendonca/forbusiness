@@ -18,6 +18,11 @@ export const Container = styled.div`
   transform: translateX(0%);
   overflow: auto;
 
+  @media (min-width: 500px) {
+    border-top-left-radius: var(--smooth-rounding);
+    border-bottom-left-radius: var(--smooth-rounding);
+  }
+
   &[hidden] {
     visibility: hidden;
     display: block;

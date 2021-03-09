@@ -6,7 +6,7 @@ export const Container = styled.div`
   margin: 1.4rem 0 0;
   font-family: var(--primary-font);
   box-shadow: var(--elevation);
-  border-radius: 2px;
+  border-radius: var(--smooth-rounding);
   padding: 1em;
   max-width: 100%;
   box-sizing: border-box;
@@ -22,6 +22,23 @@ export const Title = styled.h2`
 
 export const Subtitle = styled(Title)`
   margin-top: 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+
+  small {
+    opacity: .5;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 8px;
+    display: inline-block;
+    transform: translateY(1px);
+  }
+`
+
+export const Text = styled.p`
+  margin-bottom: 0;
 `
 
 export const Illustration = styled.img`
@@ -33,4 +50,21 @@ export const Options = styled.div`
   position: absolute;
   top: -52px;
   right: 0;
+`
+
+export const Item = styled.li`
+  list-style: none;
+  padding: 16px 0;
+  margin: 0;
+  border-top: 1px solid var(--secondary);
+  box-sizing: border-box;
+
+  :first-child {
+    border-top: 0;
+    padding-top: 8px;
+  }
+
+  :last-child {
+    padding-bottom: 8px;
+  }
 `

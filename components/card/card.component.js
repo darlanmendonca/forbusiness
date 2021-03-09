@@ -1,4 +1,4 @@
-import { Container, Title, Subtitle, Illustration, Options } from './card.style.js'
+import { Container, Title, Subtitle, Illustration, Options, Item, Text, Tag } from './card.style.js'
 import { string, node } from 'prop-types'
 
 /**
@@ -42,3 +42,9 @@ Card.Illustration = Illustration
   * Exibe um header com opções relativas ao card
   */
 Card.Options = Options
+
+Card.Item = Item
+
+Card.Subtitle = Subtitle
+
+Card.Text = Text

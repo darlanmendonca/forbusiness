@@ -21,6 +21,9 @@ body {
 
   /* motion */
   --fast: .2s;
+
+  /* rounding */
+  --smooth-rounding: 4px;
 }
 
 
