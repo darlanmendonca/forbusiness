@@ -36,9 +36,9 @@ const UserHeader = () => {
         </MainHeader.Navigation>
 
         <MainHeader.Options aria-label='Outros recursos'>
-          <MainHeader.Button label='Buscar profissionais' icon='search' />
-          <MainHeader.Button label='Novidades' icon='megaphone' solid onClick={ news.show } />
+          {/* <MainHeader.Button label='Buscar profissionais' icon='search' /> */}
           <MainHeader.Button label='Mensagens' icon='message-square-detail' solid onClick={ messages.show } />
+          <MainHeader.Button label='Novidades' icon='megaphone' solid onClick={ news.show } />
           {/* <MainHeader.Button label='Entrevistas online' icon='videos' solid /> */}
           {/* <MainHeader.Button label='Marketplace' icon='store' solid /> */}
           <MainHeader.Button label='Ajuda' icon='help-circle' solid onClick={ help.show } />
