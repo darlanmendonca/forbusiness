@@ -49,10 +49,11 @@ const Home = () => {
               <Card.Item>
                 <Card.Subtitle>
                   <Avatar
-                    name={ owner.firstname }
+                    label={ owner.firstname }
                     image={ owner.image }
                     size='11px'
                     style={{ marginRight: 10 }}
+                    tooltip
                   />
 
                   { name } { level } <small>v{ id }</small>
