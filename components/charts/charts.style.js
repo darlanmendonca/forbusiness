@@ -13,6 +13,10 @@ export const Container = styled.div`
     overflow-x: auto;
     overflow-y: hidden;
 
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
     & > div {
       height: 240px;
       min-width: calc(100% - 30px);

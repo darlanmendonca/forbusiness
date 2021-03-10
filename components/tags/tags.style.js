@@ -8,6 +8,10 @@ export const List = styled.ul`
   transform: translateX(-1rem);
   width: calc(100% + 2rem);
   box-sizing: border-box;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 export const Item = styled.li`
