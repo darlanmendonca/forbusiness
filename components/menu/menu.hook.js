@@ -34,6 +34,7 @@ export const useMenu = () => {
     'aria-expanded': isVisible,
     'aria-haspopup': 'true',
     onBlur: autoHideMenuOnBlur,
+    tabIndex: isVisible ? '-1' : '0'
   }
 
   return {

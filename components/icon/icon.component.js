@@ -16,8 +16,6 @@ const Icon = ({ name, solid, color, size = '1em', ...props}) => {
     ? Solid[icon]
     : Regular[icon]
 
-  if (!IconComponent) console.log('>>>', name)
-
   return (
     <>
       <IconComponent

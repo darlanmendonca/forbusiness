@@ -65,9 +65,8 @@ export const NavigationLink = styled.a`
 
     :after {
       left: 50%;
-      background-color: white;
-      border-radius: 4px;
-      content: "";
+      background-color: currentColor;
+      content: '';
       height: 2px;
       opacity: 0;
       position: absolute;
@@ -86,7 +85,7 @@ export const NavigationLink = styled.a`
     height: 4em;
     padding: 0 10px;
     margin: 8px 0 0;
-    border-radius: 4px;
+    border-radius: var(--smooth-rounding);
     transition: background-color var(--fast) ease;
     width: 100%;
     box-sizing: border-box;
@@ -149,11 +148,11 @@ export const Button = styled.button`
       background: var(--foreground);
       color: var(--primary);
       padding: 4px 8px;
-      border-radius: 4px;
       opacity: 0;
       pointer-events: none;
       white-space: nowrap;
       box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+      border-radius: var(--smooth-rounding);
       transition: opacity var(--fast) ease;
     }
 
@@ -209,6 +208,8 @@ export const MenuButton = styled(Button)`
 `
 
 export const AvatarButton = styled(Avatar)`
+  cursor: pointer;
+
   ${ props => props.theme.type === 'desktop' && css`
     transform: translateY(-2px);
     margin-left: 8px;

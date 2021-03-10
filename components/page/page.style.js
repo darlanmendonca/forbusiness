@@ -15,15 +15,6 @@ export const Content = styled.div`
   width: 100%;
   color: var(--primary);
   font-family: var(--primary-font);
-
-  a {
-    color: var(--accent);
-    text-decoration: none;
-
-    :hover {
-      text-decoration: underline;
-    }
-  }
 `
 
 export const Header = styled.header`
@@ -36,7 +27,6 @@ export const Header = styled.header`
   color: white;
   font-family: var(--primary-font);
   box-sizing: border-box;
-  /*box-shadow: var(--elevation);*/
 
   a {
     color: white;

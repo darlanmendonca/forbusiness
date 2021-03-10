@@ -5,6 +5,7 @@ export const Container = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 10;
 `
 
 export const MenuList = styled.ul`
@@ -26,6 +27,7 @@ export const MenuList = styled.ul`
   transform: translate(25px, 30px);
   box-sizing: border-box;
   transition: opacity var(--fast) ease;
+  box-shadow: var(--elevation);
 
   &[hidden] {
     display: block;

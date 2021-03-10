@@ -7,6 +7,8 @@ import Card from '../components/card/card.component.js'
 import Charts from '../components/charts/charts.component.js'
 import { useVacancies } from '../hooks/vacancies/vacancies.hook.js'
 import Tags from '../components/tags/tags.component.js'
+import Button from '../components/button/button.component.js'
+import Icon from '../components/icon/icon.component.js'
 
 /**
   * Página inicial, visível apenas para usuários logados.
@@ -42,6 +44,17 @@ const Home = () => {
 
       <Page.Content>
         <Card title='Suas vagas em andamento' as='ul'>
+          <Card.Options>
+            <Link href='/vagas/publicacao' passHref>
+              <Button as='a' aria-label='Publicar vaga'>
+                <Icon
+                  name='plus'
+                  color='var(--primary)'
+                />
+              </Button>
+            </Link>
+          </Card.Options>
+
           { vacancies
             .filter(vaga => vaga.owner.firstname === user.firstname)
             .filter(vaga => vaga.status === 'Em andamento')

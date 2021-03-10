@@ -3,10 +3,13 @@ import Head from 'next/head'
 import UserHeader from '../../components/user-header/user-header.component.js'
 import Card from '../../components/card/card.component.js'
 import Icon from '../../components/icon/icon.component.js'
-// import Link from 'next/link'
+import Link from 'next/link'
 import { useVacancies } from '../../hooks/vacancies/vacancies.hook.js'
 import Tags from '../../components/tags/tags.component.js'
 import Avatar from '../../components/avatar/avatar.component.js'
+import Menu from '../../components/menu/menu.component.js'
+import { useMenu } from '../../components/menu/menu.hook.js'
+import Button from '../../components/button/button.component.js'
 
 /**
   * Exibe a lista de vagas, com filtros de pesquisa,
@@ -16,6 +19,8 @@ const Vagas = () => {
   const vacancies = useVacancies()
   const day = 'numeric'
   const month = 'long'
+
+  const listOptions = useMenu()
 
   return (
     <Page>
@@ -31,29 +36,26 @@ const Vagas = () => {
       </Page.Header>
 
       <Page.Content>
-  {/*       <Card title='Vagas em andamento' style={{ height: 3 * 100 }}> */}
-  {/*         <Card.Options> */}
-  {/*           <Icon */}
-  {/*             name='menu-alt-left' */}
-  {/*             color='var(--primary)' */}
-  {/*             size='32px' */}
-  {/*           /> */}
-  {/*  */}
-  {/*           <Link href='/vagas/publicacao'> */}
-  {/*             <a> */}
-  {/*               <Icon */}
-  {/*                 name='plus' */}
-  {/*                 color='var(--primary)' */}
-  {/*                 size='32px' */}
-  {/*               /> */}
-  {/*             </a> */}
-  {/*           </Link> */}
-  {/*         </Card.Options> */}
-  {/*       </Card> */}
+        <Card title='Vagas' as='ul'>
+          <Card.Options>
+            <Button aria-label='Filtros'>
+              <Icon
+                name='slider'
+                color='var(--primary)'
+              />
+            </Button>
 
-        <Card title='Vagas em andamento' as='ul'>
+            <Link href='/vagas/publicacao' passHref>
+              <Button as='a' aria-label='Publicar vaga'>
+                <Icon
+                  name='plus'
+                  color='var(--primary)'
+                />
+              </Button>
+            </Link>
+          </Card.Options>
+
           { vacancies
-            .filter(vaga => vaga.status === 'Em andamento')
             .map(({ name, location, level, id, owner, status, date }, index) =>
               <Card.Item key={ index }>
                 <Card.Subtitle>
@@ -69,7 +71,7 @@ const Vagas = () => {
                 </Card.Subtitle>
 
                 <Tags label='Informações da vaga'>
-                  <Tags.Item label='Código da vaga' color='var(--accent)' icon='note'>
+                  <Tags.Item label='Código da vaga' color='var(--accent)' icon='file-blank'>
                     v{ id }
                   </Tags.Item>
 
@@ -91,9 +93,13 @@ const Vagas = () => {
                     { date.expiration.toLocaleDateString('pt-BR', { day, month }) }
                   </Tags.Item>
 
-                  {/* <Tags.Item label='Status' color='lightsteelblue' icon='info-circle'> */}
-                  {/*   { status } */}
-                  {/* </Tags.Item> */}
+                  <Tags.Item
+                    label='Status'
+                    color='var(--light-blue)'
+                    icon='info-circle'
+                  >
+                    { status }
+                  </Tags.Item>
                 </Tags>
               </Card.Item>
             )

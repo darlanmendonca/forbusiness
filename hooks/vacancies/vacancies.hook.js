@@ -22,7 +22,7 @@ export const useVacancies = () => {
     {
       id: 2167406,
       name: 'Auxiliar administrativo',
-      status: 'Em andamento',
+      status: 'Agendada',
       date: {
         open: new Date('2021-03-01T00:00:00'),
         expiration: new Date('2021-03-30T00:00:00'),
@@ -33,7 +33,7 @@ export const useVacancies = () => {
     {
       id: 2167408,
       name: 'Recepcionista',
-      status: 'Em andamento',
+      status: 'Encerrada',
       date: {
         open: new Date('2021-03-01T00:00:00'),
         expiration: new Date('2021-03-30T00:00:00'),
