@@ -138,7 +138,7 @@ MainHeader.Button = ({ label, icon, solid, ...props }) => (
       name={ icon }
       color='white'
       size='24px'
-      type={ solid ? 'solid' : 'regular' }
+      solid={ solid }
     />
   </Button>
 )

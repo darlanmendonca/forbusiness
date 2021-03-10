@@ -17,8 +17,8 @@ Tags.Item = ({ label, color, icon, children }) => (
     <Icon
       name={ icon }
       color={ color }
-      type='solid'
       size='18px'
+      solid
     />
     { children }
   </Item>
