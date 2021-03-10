@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export const useMenu = () => {
   const [ isVisible, setIsVisible ] = useState(false)
@@ -6,15 +6,6 @@ export const useMenu = () => {
   const toggle = () => setIsVisible(!isVisible)
   const show = ()  => setIsVisible(true)
   const hide = () => setIsVisible(false)
-
-  useEffect(() => {
-    if (isVisible) {
-      document.body.style.overflow = 'hidden'
-      document.body.style.position = 'fixed'
-    } else {
-      document.body.removeAttribute('style')
-    }
-  }, [ isVisible ])
 
   const autoHideMenuOnBlur = event => {
     setTimeout(() => {

@@ -33,12 +33,12 @@ export const Container = styled.div`
 
 export const Title = styled.h2`
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 64px;
   margin: 0;
-  padding: 0 65px 0 10px;
-  background: var(--brand-gradient);
-  color: white;
+  padding: 0 65px 0 16px;
+  /*background: var(--brand-gradient);*/
+  color: var(--primary);
 `
 
 export const CloseButton = styled.button`

@@ -20,6 +20,14 @@ export const useAside = () => {
 
   useEffect(autoFocus, [isVisible])
 
+  useEffect(() => {
+    if (isVisible) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.removeAttribute('style')
+    }
+  }, [ isVisible ])
+
   return {
     toggle,
     show,

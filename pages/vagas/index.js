@@ -54,8 +54,8 @@ const Vagas = () => {
         <Card title='Vagas em andamento' as='ul'>
           { vacancies
             .filter(vaga => vaga.status === 'Em andamento')
-            .map(({ name, location, level, id, owner, status, date }) =>
-              <Card.Item>
+            .map(({ name, location, level, id, owner, status, date }, index) =>
+              <Card.Item key={ index }>
                 <Card.Subtitle>
                   <Avatar
                     label={ owner.firstname }
