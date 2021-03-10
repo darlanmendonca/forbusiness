@@ -10,11 +10,11 @@ const Icon = ({ name, solid, color, size = '1em', ...props}) => {
   const toCamelCase = string => '-'.concat(string)
     .replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
 
-  const iconName = toCamelCase(name)
+  const icon = toCamelCase(name)
 
-  const IconComponent = solid && iconName in Solid
-    ? Solid[iconName]
-    : Regular[iconName]
+  const IconComponent = solid && icon in Solid
+    ? Solid[icon]
+    : Regular[icon]
 
   if (!IconComponent) console.log('>>>', name)
 

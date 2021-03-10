@@ -26,7 +26,6 @@ export const Item = styled.li`
   color: ${ props => props.color };
   position: relative;
   box-sizing: border-box;
-  transform: translateZ(0);
 
   :first-child {
     margin-left: 1rem;
