@@ -12,6 +12,7 @@ export const Container = styled.div`
   @media (max-width: 700px) {
     overflow-x: auto;
     overflow-y: hidden;
+    scroll-snap-type: x mandatory;
 
     ::-webkit-scrollbar {
       display: none;
@@ -21,6 +22,7 @@ export const Container = styled.div`
       height: 240px;
       min-width: calc(100% - 30px);
       margin-right: 10px;
+      scroll-snap-align: center;
 
       :first-of-type {
         margin-left: 10px;
