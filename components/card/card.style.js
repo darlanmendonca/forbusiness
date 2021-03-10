@@ -24,7 +24,6 @@ export const Subtitle = styled(Title)`
   margin-top: 0;
   font-size: 18px;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 8px;
 `

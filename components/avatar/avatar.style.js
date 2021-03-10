@@ -21,6 +21,7 @@ export const Image = styled.div`
   user-select: none;
   vertical-align: bottom;
   width: 3em;
+  min-width: 3em;
   -webkit-font-smoothing: antialiased;
   position: relative;
   border: 2px solid white;
