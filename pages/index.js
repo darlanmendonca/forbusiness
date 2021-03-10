@@ -60,17 +60,26 @@ const Home = () => {
                 </Card.Subtitle>
 
                 <Tags label='Informações da vaga'>
-                  <Tags.Item label='Código da vaga' color='var(--accent)' icon='note'>
+                  <Tags.Item
+                    label='Código da vaga'
+                    color='var(--accent)'
+                    icon='note'
+                  >
                     v{ id }
                   </Tags.Item>
-                  <Tags.Item label='Local de trabalho' color='deepSkyBlue' icon='map'>
+
+                  <Tags.Item
+                    label='Local de trabalho'
+                    color='var(--blue)'
+                    icon='map'
+                  >
                     { location }
                   </Tags.Item>
 
                   <Tags.Item
                     label='Período de inscrições'
                     icon='time-five'
-                    color={ status === 'Encerrada' ? 'gold' : 'greenyellow' }
+                    color={ status === 'Encerrada' ? 'var(--yellow)' : 'var(--green)' }
                   >
                     { date.open.toLocaleDateString('pt-BR', { day }) }
                     { ' a ' }

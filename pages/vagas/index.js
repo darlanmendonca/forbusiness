@@ -75,7 +75,7 @@ const Vagas = () => {
 
                   <Tags.Item
                     label='Local de trabalho'
-                    color='deepSkyBlue'
+                    color='var(--blue)'
                     icon='map'
                   >
                     { location }
@@ -83,7 +83,7 @@ const Vagas = () => {
 
                   <Tags.Item
                     label='Período de inscrições'
-                    color={ status === 'Encerrada' ? 'gold' : 'greenyellow' }
+                    color={ status === 'Encerrada' ? 'var(--yellow)' : 'var(--green)' }
                     icon='time-five'
                   >
                     { date.open.toLocaleDateString('pt-BR', { day }) }

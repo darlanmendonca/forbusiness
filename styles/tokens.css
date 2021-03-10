@@ -12,6 +12,9 @@ body {
   --secondary: #8c8c8c;
   --tertiary: #d4d5d5;
   --accent: var(--professionals-color);
+  --yellow: gold;
+  --blue: deepSkyBlue;
+  --green: forestGreen;
 
   /* typography */
   --primary-font: 'Open Sans', sans-serif;
@@ -35,6 +38,7 @@ body {
     --primary: white;
     --secondary: #343a40;
     --tertiary: #212529;
+    --green: greenyellow;
   }
 }
 
