@@ -18,15 +18,29 @@ export const useAside = () => {
     }
   }
 
-  useEffect(autoFocus, [isVisible])
-
-  useEffect(() => {
+  const avoidBodyScroll = () => {
     if (isVisible) {
       document.body.style.overflow = 'hidden'
     } else {
       document.body.removeAttribute('style')
     }
-  }, [ isVisible ])
+  }
+
+  const listenEscapeKey = () => {
+    const escape = event => event.key === 'Escape' && hide()
+
+    if (isVisible) {
+      document.addEventListener('keydown', escape)
+    } else {
+      document.removeEventListener('keydown', escape)
+    }
+
+    return () => document.removeEventListener('keydown', escape)
+  }
+
+  useEffect(autoFocus, [isVisible])
+  useEffect(avoidBodyScroll, [ isVisible ])
+  useEffect(listenEscapeKey, [ isVisible ])
 
   return {
     toggle,
