@@ -27,7 +27,7 @@ export const Item = styled.li`
   position: relative;
   box-sizing: border-box;
 
-  :first-child {
+  :first-of-type {
     margin-left: 1rem;
   }
 

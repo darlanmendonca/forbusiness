@@ -6,7 +6,6 @@ export const Container = styled.div`
   margin: 1.4rem 0 0;
 
   @media (prefers-color-scheme: light) {
-    /*--primary: #797979;*/
     --secondary: var(--tertiary);
   }
 `
@@ -61,12 +60,12 @@ export const Item = styled.li`
   border-top: 1px solid var(--secondary);
   box-sizing: border-box;
 
-  :first-child {
+  :first-of-type {
     border-top: 0;
     padding-top: 8px;
   }
 
-  :last-child {
+  :last-of-type {
     padding-bottom: 8px;
   }
 `
