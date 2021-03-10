@@ -2,6 +2,12 @@ import styled from '@emotion/styled'
 
 export const List = styled.ul`
   padding: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  transform: translateX(-1rem);
+  width: calc(100% + 2rem);
+  box-sizing: border-box;
 `
 
 export const Item = styled.li`
@@ -18,6 +24,10 @@ export const Item = styled.li`
   box-sizing: border-box;
   transform: translateZ(0);
 
+  :first-child {
+    margin-left: 1rem;
+  }
+
   :before {
     content: '';
     background: ${ props => props.color };
@@ -28,29 +38,6 @@ export const Item = styled.li`
     right: 0;
     opacity: .2;
     border-radius: inherit;
-  }
-
-  :after {
-    content: attr(aria-label);
-    font-size: 13px;
-    line-height: 1.2em;
-    position: fixed;
-    top: 100%;
-    left: 50%;
-    transform:  translate(-50%, 2px);
-    background: var(--foreground);
-    color: var(--primary);
-    padding: 4px 8px;
-    border-radius: 4px;
-    opacity: 0;
-    pointer-events: none;
-    white-space: nowrap;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-    transition: opacity var(--fast) ease;
-  }
-
-  :hover, :focus {
-    :after {opacity: 1}
   }
 
   box-icon {

@@ -56,10 +56,13 @@ const Home = () => {
                     tooltip
                   />
 
-                  { name } { level } <small>v{ id }</small>
+                  { name } { level }
                 </Card.Subtitle>
 
                 <Tags label='Informações da vaga'>
+                  <Tags.Item label='Código da vaga' color='var(--accent)' icon='note'>
+                    v{ id }
+                  </Tags.Item>
                   <Tags.Item label='Local de trabalho' color='deepSkyBlue' icon='map'>
                     { location }
                   </Tags.Item>

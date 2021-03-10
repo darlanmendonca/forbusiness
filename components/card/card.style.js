@@ -7,7 +7,7 @@ export const Container = styled.div`
   font-family: var(--primary-font);
   box-shadow: var(--elevation);
   border-radius: var(--smooth-rounding);
-  padding: 1em;
+  padding: 1rem;
   max-width: 100%;
   box-sizing: border-box;
   position: relative;
@@ -24,17 +24,9 @@ export const Subtitle = styled(Title)`
   margin-top: 0;
   font-size: 18px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 8px;
-
-  small {
-    opacity: .5;
-    font-size: 14px;
-    font-weight: 500;
-    margin-left: 8px;
-    display: inline-block;
-    transform: translateY(1px);
-  }
 `
 
 export const Text = styled.p`

@@ -3,7 +3,6 @@ import Icon from '../icon/icon.component.js'
 
 const Tags = ({ label, children, icon, color }) => (
   <List aria-label={ label }>
-
     { children }
   </List>
 )
