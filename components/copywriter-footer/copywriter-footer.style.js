@@ -4,13 +4,18 @@ export const Footer = styled.footer`
   color: var(--secondary);
   font-family: var(--primary-font);
   margin: 34px auto 0;
-  max-width: 1200px;
+  max-width: calc(1200px - 20px);
   padding: 20px 10px;
   box-sizing: border-box;
   border-top: 1px solid var(--tertiary);
   font-size: 12px;
   line-height: 34px;
-  width: 100%;
+  width: calc(100% - 20px);
+  white-space: nowrap;
+
+  @media (max-width: 500px) {
+    text-align: center;
+  }
 
   img {
     transform: translateY(6px);
