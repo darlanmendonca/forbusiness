@@ -137,6 +137,7 @@ MainHeader.Button = ({ label, icon, solid, ...props }) => (
       aria-hidden='true'
       name={ icon }
       color='white'
+      size='24px'
       type={ solid ? 'solid' : 'regular' }
     />
   </Button>

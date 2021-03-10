@@ -23,7 +23,6 @@ const Aside = ({ children, title, controller }) => (
       <Icon
         name='x'
         color='white'
-        type='solid'
         size='34px'
       />
     </CloseButton>

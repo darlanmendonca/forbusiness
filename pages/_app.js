@@ -11,8 +11,8 @@ const App = ({ Component, pageProps }) => (
       <meta key='robots' name='robots' content='noindex,follow' />
       <meta key='googlebot' name='googlebot' content='noindex,follow' />
       <link rel='icon' href='/favicon.png' />
-      <script src='https://unpkg.com/boxicons@latest/dist/boxicons.js'></script>
     </Head>
+
 
     <Component { ...pageProps } />
   </>

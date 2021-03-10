@@ -187,8 +187,7 @@ export const Button = styled.button`
     justify-content: start;
     overflow: hidden;
 
-    box-icon {
-      transform: translateY(-10px);
+    svg {
       margin-right: 10px;
     }
 

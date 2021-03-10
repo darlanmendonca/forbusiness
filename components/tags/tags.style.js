@@ -44,7 +44,7 @@ export const Item = styled.li`
     border-radius: inherit;
   }
 
-  box-icon {
+  svg {
     margin-right: 2px;
   }
 `

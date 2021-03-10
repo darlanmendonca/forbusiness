@@ -45,8 +45,8 @@ const Home = () => {
           { vacancies
             .filter(vaga => vaga.owner.firstname === user.firstname)
             .filter(vaga => vaga.status === 'Em andamento')
-            .map(({ name, location, level, id, owner, status, date }) =>
-              <Card.Item>
+            .map(({ name, location, level, id, owner, status, date }, index) =>
+              <Card.Item key={ index }>
                 <Card.Subtitle>
                   <Avatar
                     label={ owner.firstname }
