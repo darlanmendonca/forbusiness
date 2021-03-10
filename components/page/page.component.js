@@ -2,6 +2,7 @@ import { Container, Content, Header, Title, Text } from './page.style.js'
 import SegmentHeader from '../segment-header/segment-header.component'
 import CopywriterFooter from '../copywriter-footer/copywriter-footer.component.js'
 import { node } from 'prop-types'
+import { motion, useReducedMotion } from 'framer-motion'
 
 /**
   * O componente `Page` define o layout da página
@@ -39,7 +40,38 @@ Page.Header.propTypes = {
   * e empurra o footer para o inferior da página
   * a fim de manter a hierarquia visual do mesmo.
   */
-Page.Content = Content
+Page.Content = ({ children }) => {
+  const shouldReduceMotion = useReducedMotion()
+
+  const variants = {
+    hidden: {
+      y: 50,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  }
+
+  const transition = { type: 'tween' }
+
+  const initial = shouldReduceMotion ? 'visible' : 'hidden'
+  const animate = shouldReduceMotion ? 'visible' : 'visible'
+
+  return (
+    <Content>
+      <motion.div
+        initial={ initial }
+        animate={ animate }
+        variants={ variants }
+        transition={ transition }
+      >
+        { children }
+      </motion.div>
+    </Content>
+  )
+}
 
 Page.Content.propTypes = {
   // Define o elementos a exibir

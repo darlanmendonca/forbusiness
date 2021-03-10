@@ -21,6 +21,15 @@ export const Section = styled.div`
   box-sizing: border-box;
   position: relative;
   min-height: 100%;
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+
+    :hover {
+      text-decoration: underline;
+    }
+  }
 `
 
 export const Title = styled.h2`

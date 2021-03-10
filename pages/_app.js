@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import '../styles/globals.css'
 import '../styles/tokens.css'
+import { AnimateSharedLayout } from 'framer-motion'
 
 const App = ({ Component, pageProps }) => (
   <>
@@ -13,8 +14,9 @@ const App = ({ Component, pageProps }) => (
       <link rel='icon' href='/favicon.png' />
     </Head>
 
-
-    <Component { ...pageProps } />
+    <AnimateSharedLayout>
+      <Component { ...pageProps } />
+    </AnimateSharedLayout>
   </>
 )
 
