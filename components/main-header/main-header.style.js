@@ -112,12 +112,12 @@ export const Options = styled.aside`
       content: attr(aria-label);
       position: absolute;
       top: 0;
-      left: 0%;
+      left: -10px;
       line-height: 1em;
       transform: translate(10px, -50%);
       background: var(--foreground);
       color: var(--accent);
-      padding: 0 8px;
+      padding: 0 8px 0 10px;
       font-size: 12px;
     }
   `}

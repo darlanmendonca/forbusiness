@@ -37,7 +37,6 @@ export const Title = styled.h2`
   line-height: 64px;
   margin: 0;
   padding: 0 65px 0 16px;
-  /*background: var(--brand-gradient);*/
   color: var(--primary);
 `
 

@@ -21,9 +21,10 @@ const Aside = ({ children, title, controller }) => (
       ref={ controller.closeButtonRef }
     >
       <Icon
-        name='x'
+        name='x-circle'
         color='white'
         size='34px'
+        solid
       />
     </CloseButton>
 
