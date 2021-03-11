@@ -45,6 +45,7 @@ export const NavigationLink = styled.a`
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
+  outline-offset: 10px;
 
   ${ props => props.theme.type === 'desktop' && css`
     color: white;
