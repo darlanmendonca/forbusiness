@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
 `
 
 export const Content = styled.div`
@@ -15,7 +16,6 @@ export const Content = styled.div`
   width: 100%;
   color: var(--primary);
   font-family: var(--primary-font);
-  overflow: hidden;
 `
 
 export const Header = styled.header`
