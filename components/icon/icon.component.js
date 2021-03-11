@@ -14,7 +14,9 @@ const Icon = ({ name, solid, color, size = '1em', ...props}) => {
 
   const IconComponent = solid && icon in Solid
     ? Solid[icon]
-    : Regular[icon]
+    : icon in Regular
+      ? Regular[icon]
+      : Regular.Square
 
   return (
     <>
