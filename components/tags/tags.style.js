@@ -5,8 +5,8 @@ export const List = styled.ul`
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
-  transform: translateX(-3rem);
-  width: calc(100% + 4rem);
+  transform: translateX(-1rem);
+  width: calc(100% + 2rem);
   box-sizing: border-box;
 
   ::-webkit-scrollbar {
