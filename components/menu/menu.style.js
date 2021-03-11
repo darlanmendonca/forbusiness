@@ -18,7 +18,7 @@ export const MenuList = styled.ul`
   display: inline-flex;
   flex-direction: column;
   min-width: 200px;
-  padding: 16px 0;
+  padding: 16px 0 8px;
   position: absolute;
   top: 100%;
   right: 0;
@@ -38,12 +38,19 @@ export const MenuList = styled.ul`
 
   a {
     display: block;
-    padding: 0 16px;
+    padding: 0 10px;
+    margin: 0 10px 0;
+    line-height: 2.4em;
+    height: 2.4em;
     color: var(--primary);
     text-decoration: none;
+    border-radius: var(--smooth-radius);
+    transition: background-color var(--fast) ease;
+    margin-bottom: 8px;
 
     :hover, :focus {
-      color: var(--professionals-color);
+      /*color: var(--professionals-color);*/
+      background-color: var(--secondary);
     }
   }
 
