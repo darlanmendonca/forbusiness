@@ -59,7 +59,7 @@ export const Image = styled.div`
     background: var(--foreground);
     color: var(--primary);
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: var(--smooth-radius);
     opacity: 0;
     pointer-events: none;
     white-space: nowrap;

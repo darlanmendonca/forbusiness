@@ -15,6 +15,11 @@ export const Content = styled.div`
   width: 100%;
   color: var(--primary);
   font-family: var(--primary-font);
+
+  @media (max-width: 1200px) {
+    /* temp enquanto não se resolve o posicionamento automático de tooltips */
+    overflow: hidden;
+  }
 `
 
 export const Header = styled.header`

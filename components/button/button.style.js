@@ -10,7 +10,7 @@ export const FlatButton = styled.button`
   height: 40px;
   align-items: center;
   justify-content: center;
-  border-radius: var(--smooth-rounding);
+  border-radius: var(--smooth-radius);
   transition: background-color var(--fast) ease;
   cursor: pointer;
   position: relative;
@@ -28,7 +28,7 @@ export const FlatButton = styled.button`
     background: var(--foreground);
     color: var(--primary);
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: var(--smooth-radius);
     opacity: 0;
     pointer-events: none;
     white-space: nowrap;

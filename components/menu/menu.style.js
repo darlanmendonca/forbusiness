@@ -14,7 +14,7 @@ export const MenuList = styled.ul`
   margin: 0;
   text-align: left;
   background: var(--foreground);
-  border-radius: 4px;
+  border-radius: var(--smooth-radius);
   display: inline-flex;
   flex-direction: column;
   min-width: 200px;

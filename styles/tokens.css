@@ -26,8 +26,8 @@ body {
   /* motion */
   --fast: .2s;
 
-  /* rounding */
-  --smooth-rounding: 4px;
+  /* border radius */
+  --smooth-radius: 8px;
 }
 
 

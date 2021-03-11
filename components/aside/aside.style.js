@@ -19,8 +19,8 @@ export const Container = styled.div`
   overflow: auto;
 
   @media (min-width: 500px) {
-    border-top-left-radius: var(--smooth-rounding);
-    border-bottom-left-radius: var(--smooth-rounding);
+    border-top-left-radius: var(--smooth-radius);
+    border-bottom-left-radius: var(--smooth-radius);
   }
 
   &[hidden] {

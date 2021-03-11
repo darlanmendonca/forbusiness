@@ -85,7 +85,7 @@ export const NavigationLink = styled.a`
     height: 4em;
     padding: 0 10px;
     margin: 8px 0 0;
-    border-radius: var(--smooth-rounding);
+    border-radius: var(--smooth-radius);
     transition: background-color var(--fast) ease;
     width: 100%;
     box-sizing: border-box;
@@ -128,6 +128,7 @@ export const Button = styled.button`
   background: none;
   justify-content: center;
   align-items: center;
+  border-radius: var(--smooth-radius);
 
   ${ props => props.theme.type === 'desktop' && css`
     width: 40px;
@@ -152,7 +153,7 @@ export const Button = styled.button`
       pointer-events: none;
       white-space: nowrap;
       box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-      border-radius: var(--smooth-rounding);
+      border-radius: var(--smooth-radius);
       transition: opacity var(--fast) ease;
     }
 
@@ -169,7 +170,7 @@ export const Button = styled.button`
     padding: 0 10px;
     background-color: transparent;
     margin: 8px 0 0;
-    border-radius: 4px;
+    border-radius: var(--smooth-radius);
     transition: background-color var(--fast) ease;
     width: 100%;
     box-sizing: border-box;

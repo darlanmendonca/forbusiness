@@ -15,7 +15,7 @@ export const Section = styled.div`
   background: var(--foreground);
   font-family: var(--primary-font);
   box-shadow: var(--elevation);
-  border-radius: var(--smooth-rounding);
+  border-radius: var(--smooth-radius);
   padding: 1rem;
   max-width: 100%;
   box-sizing: border-box;
