@@ -24,7 +24,7 @@ export const Section = styled.div`
 `
 
 export const Title = styled.h2`
-  font-weight: 500;
+  font-weight: 600;
   font-size: 24px;
   margin: 2rem 0 0;
   color: var(--primary);

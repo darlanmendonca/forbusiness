@@ -118,7 +118,7 @@ MainHeader.Options = ({ children, ...props }) => (
 MainHeader.Link = ({ label, href }) => {
   const router = useRouter()
 
-  return router.pathname === href
+  return router.pathname === href || (href !== '/' && router.pathname.startsWith(href))
     ? <NavigationLink aria-current='page' href={ href }>{ label }</NavigationLink>
     : (
     <Link href={ href } passHref>

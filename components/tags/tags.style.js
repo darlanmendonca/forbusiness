@@ -5,8 +5,8 @@ export const List = styled.ul`
   white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
-  transform: translateX(-1rem);
-  width: calc(100% + 2rem);
+  transform: translateX(-3rem);
+  width: calc(100% + 4rem);
   box-sizing: border-box;
 
   ::-webkit-scrollbar {
@@ -28,7 +28,7 @@ export const Item = styled.li`
   box-sizing: border-box;
 
   :first-of-type {
-    margin-left: 1rem;
+    margin-left: 3.5rem;
   }
 
   :before {
