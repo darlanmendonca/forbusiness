@@ -40,9 +40,10 @@ const Home = () => {
         </p>
       </Page.Header>
 
-      <Charts />
 
       <Page.Content>
+        <Charts />
+
         <Card title='Suas vagas em andamento' as='ul'>
           <Card.Options>
             <Link href='/vagas/publicacao' passHref>

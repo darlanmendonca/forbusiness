@@ -3,9 +3,6 @@ import styled from '@emotion/styled'
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
   box-sizing: border-box;
   padding-bottom: 10px;
 
@@ -13,6 +10,8 @@ export const Container = styled.div`
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
+    transform: translateX(-10px);
+    width: 100vw;
 
     ::-webkit-scrollbar {
       display: none;
@@ -42,8 +41,6 @@ export const Container = styled.div`
   }
 
   @media (min-width: 701px) {
-    padding: 0 10px;
-
     & > div {
       flex: 1;
       height: 310px;

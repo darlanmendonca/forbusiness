@@ -15,6 +15,7 @@ export const Content = styled.div`
   width: 100%;
   color: var(--primary);
   font-family: var(--primary-font);
+  overflow: hidden;
 `
 
 export const Header = styled.header`
