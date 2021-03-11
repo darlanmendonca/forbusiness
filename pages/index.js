@@ -40,11 +40,10 @@ const Home = () => {
         </p>
       </Page.Header>
 
-
       <Page.Content>
         <Charts />
 
-        <Card title='Suas vagas em andamento' as='ul'>
+        <Card.List title='Suas vagas em andamento'>
           <Card.Options>
             <Link href='/vagas/publicacao' passHref>
               <Button as='a' aria-label='Publicar vaga'>
@@ -103,7 +102,7 @@ const Home = () => {
               </Card.Item>
             )
           }
-        </Card>
+        </Card.List>
       </Page.Content>
     </Page>
   )

@@ -55,6 +55,8 @@ Card.Illustration = Illustration
   */
 Card.Options = Options
 
+Card.List = props => <Card as='ul' { ...props} />
+
 Card.Item = Item
 
 Card.Subtitle = Subtitle

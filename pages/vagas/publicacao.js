@@ -25,7 +25,7 @@ const Publicacao = () => {
       </Page.Header>
 
       <Page.Content>
-        <Card title='Qual tipo de vaga você gostaria de publicar?' as='ul'>
+        <Card.List title='Qual tipo de vaga você gostaria de publicar?'>
           { user.permissions?.vaga.write &&
             <Card.Item>
               <Card.Subtitle>
@@ -64,7 +64,7 @@ const Publicacao = () => {
               </Card.Text>
             </Card.Item>
           }
-        </Card>
+        </Card.List>
       </Page.Content>
     </Page>
   )

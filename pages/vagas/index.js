@@ -36,7 +36,7 @@ const Vagas = () => {
       </Page.Header>
 
       <Page.Content>
-        <Card title='Vagas' as='ul'>
+        <Card.List title='Vagas'>
           <Card.Options>
             <Button aria-label='Filtros'>
               <Icon
@@ -104,7 +104,7 @@ const Vagas = () => {
               </Card.Item>
             )
           }
-        </Card>
+        </Card.List>
       </Page.Content>
     </Page>
   )
