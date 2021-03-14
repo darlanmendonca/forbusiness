@@ -7,11 +7,20 @@ export const List = styled.ol`
   counter-reset: steps;
   user-select: none;
   white-space: nowrap;
+  padding: 0;
+
+  [aria-current="step"]:after {
+    background: var(--tertiary);
+  }
 
   [aria-current="step"] ~ li {
-    color: var(--tertiary);
+    color: var(--secondary);
 
-    :before {
+    :after {
+      background-color: var(--tertiary);
+    }
+
+    button:before {
       background-color: var(--tertiary);
     }
   }
@@ -19,7 +28,7 @@ export const List = styled.ol`
 
 export const Item = styled.li`
   display: inline-block;
-  margin-right: 90px;
+  margin-right: 56px;
   position: relative;
   counter-increment: steps;
   color: var(--primary);
@@ -36,31 +45,17 @@ export const Item = styled.li`
     color: var(--accent);
   }
 
-  :before {
-    content: counter(steps);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 24px;
-    background-color: var(--accent);
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    font-size: 14px;
-    color: white;
-    margin: 0 auto 8px;
-  }
-
   :after {
     background: var(--accent);
     border-radius: 4px;
     content: '';
     display: block;
     height: 4px;
-    left: calc(100% + 8px);
+    left: calc(100% - 8px);
     position: absolute;
-    top: 8px;
+    top: 12px;
     width: 68px;
+    z-index: -1;
   }
 
   button {
@@ -70,6 +65,21 @@ export const Item = styled.li`
     font-size: inherit;
     outline-offset: 4px;
     cursor: pointer;
+
+    :before {
+      content: counter(steps);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 24px;
+      background-color: var(--accent);
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      font-size: 14px;
+      color: white;
+      margin: 0 auto 8px;
+    }
   }
 `
 

@@ -8,8 +8,8 @@ const Stepper = ({ label, children }) => (
 
 export default Stepper
 
-Stepper.Item = ({ label, current }) => (
+Stepper.Item = ({ label, current, disabled }) => (
   <Item aria-current={ current ? 'step' : null }>
-    <button>{ label }</button>
+    <button disabled={ disabled }>{ label }</button>
   </Item>
 )

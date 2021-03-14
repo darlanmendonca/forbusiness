@@ -21,11 +21,13 @@ export const Section = styled.div`
   box-sizing: border-box;
   position: relative;
   min-height: 100%;
+  margin: 0;
 `
 
 export const Title = styled.h2`
   font-weight: 600;
   font-size: 24px;
+  line-height: 2em;
   margin: 2rem 0 0;
   color: var(--primary);
 `
