@@ -138,6 +138,7 @@ export const Button = styled.button`
     transform: translateY(0);
     cursor: pointer;
     position: relative;
+    transition: background var(--fast) ease;
 
     :after {
       content: attr(aria-label);
@@ -159,6 +160,7 @@ export const Button = styled.button`
     }
 
     :hover, :focus {
+      background: rgba(255, 255, 255, .2);
       :after {opacity: 1}
     }
   `}

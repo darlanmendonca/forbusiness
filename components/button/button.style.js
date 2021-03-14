@@ -44,7 +44,7 @@ export const FlatButton = styled.button`
   }
 
   :hover, :focus {
-    /*background-color: var(--secondary);*/
+    background-color: var(--secondary);
   }
 
   svg {
