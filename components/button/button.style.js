@@ -22,7 +22,7 @@ export const FlatButton = styled.button`
     font-size: 13px;
     line-height: 1.2em;
     position: fixed;
-    top: 100%;
+    top: calc(100% + 1px);
     left: 50%;
     transform:  translate(-50%, 2px);
     background: var(--foreground);
