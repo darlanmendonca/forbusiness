@@ -1,4 +1,4 @@
-import { Container, Section, Title, Subtitle, Illustration, Options, Item, Text, Tag } from './card.style.js'
+import { Container, Section, Title, Subtitle, Illustration, Options, Item, Text, Tag, Carousel } from './card.style.js'
 import { string, node } from 'prop-types'
 import { Children } from 'react'
 
@@ -62,3 +62,5 @@ Card.Item = Item
 Card.Subtitle = Subtitle
 
 Card.Text = Text
+
+Card.Carousel = Carousel
