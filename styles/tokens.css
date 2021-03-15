@@ -9,7 +9,7 @@ body {
   --background: #eee;
   --foreground: white;
   --primary: #373737;
-  --secondary: #8c8c8c;
+  --secondary: rgba(255, 255, 255, .2);
   --tertiary: #d4d5d5;
   --accent: var(--professionals-color);
   --yellow: #f7b500;
@@ -37,7 +37,7 @@ body {
     --background: #0d1117;
     --foreground: #202024;
     --primary: white;
-    --secondary: #343a40;
+    --secondary: rgba(255, 255, 255, .2);
     --tertiary: #212529;
     --yellow: gold;
     --green: greenyellow;

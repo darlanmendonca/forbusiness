@@ -1,11 +1,25 @@
 import { FlatButton } from './button.style.js'
-import React from 'react'
+import { forwardRef } from 'react'
+import Icon from 'components/icon/icon.component.js'
 
-const Button = React.forwardRef(({ children, ...props }, ref) => (
+const Button = forwardRef(({ children, label, icon, solid, size, ...props }, ref) => (
   <FlatButton
-    children={ children }
+    aria-label={ label }
+    ref={ ref }
     { ...props }
-  />
+  >
+    { icon &&
+      <Icon
+        name={ icon }
+        solid={ solid }
+        color='var(--primary)'
+        size={ size }
+        aria-hidden='true'
+      />
+    }
+
+    { !icon && (label || children) }
+  </FlatButton>
 ))
 
 export default Button

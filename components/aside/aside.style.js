@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import Button from 'components/button/button.component.js'
 
 export const Container = styled.div`
   position: fixed;
@@ -40,12 +41,12 @@ export const Title = styled.h2`
   color: var(--primary);
 `
 
-export const CloseButton = styled.button`
-  border: 0;
-  background: none;
+export const CloseButton = styled(Button)`
+  /*border: 0;*/
+  /*background: none;*/
   position: fixed;
   z-index: 10;
   top: 10px;
   right: 10px;
-  cursor: pointer;
+  /*cursor: pointer;*/
 `

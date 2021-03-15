@@ -1,4 +1,4 @@
-import { Header, Container, Logotype, Navigation, NavigationLink, Options, Button, MenuButton, AvatarButton } from './main-header.style.js'
+import { Header, Container, Logotype, Navigation, NavigationLink, Options, MenuButton, AvatarButton } from './main-header.style.js'
 import Link from 'next/link'
 import Icon from '../icon/icon.component.js'
 import { useRouter } from 'next/router'
@@ -19,7 +19,7 @@ const MainHeader = ({ children }) => {
 
   const userOptions = Children
     .toArray(children)
-    .find(item => item.type === MainHeader.Options )
+    .find(item => item.type === MainHeader.Options)
     ?.props.children
     .find(item => item.type === MainHeader.AvatarButton)
     ?.props.children
@@ -33,14 +33,12 @@ const MainHeader = ({ children }) => {
             { children }
           </ThemeProvider>
 
-          <MenuButton aria-label='Menu' onClick={ mobileMenu.show }>
-            <Icon
-              name='menu'
-              aria-hidden='true'
-              color='white'
-              size='34px'
-            />
-          </MenuButton>
+          <MenuButton
+            label='Menu'
+            icon='menu'
+            size='34px'
+            onClick={ mobileMenu.show }
+          />
         </Container>
       </Header>
 
@@ -126,22 +124,6 @@ MainHeader.Link = ({ label, href }) => {
     </Link>
   )
 }
-
-/**
-  * O MainHeader.Button exibe um botão com ícone e tooltip,
-  * posicionado de forma secundária visualmente.
-  */
-MainHeader.Button = ({ label, icon, solid, ...props }) => (
-  <Button aria-label={ label } { ...props }>
-    <Icon
-      aria-hidden='true'
-      name={ icon }
-      color='white'
-      size='24px'
-      solid={ solid }
-    />
-  </Button>
-)
 
 MainHeader.AvatarButton = ({ label, user, image, ...props }) => (
   <AvatarButton

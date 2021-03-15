@@ -1,12 +1,14 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import Avatar from '../avatar/avatar.component.js'
+import Button from '../button/button.component.js'
 
 export const Header = styled.header`
   position: sticky;
   top: 0;
   z-index: 10;
   background: var(--brand-gradient);
+  --primary: white;
 `
 
 export const Container = styled.div`
@@ -45,7 +47,6 @@ export const NavigationLink = styled.a`
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
-  outline-offset: 10px;
 
   ${ props => props.theme.type === 'desktop' && css`
     color: white;
@@ -53,6 +54,7 @@ export const NavigationLink = styled.a`
     position: relative;
     line-height: 66px;
     height: 44px;
+    outline-offset: 10px;
 
     :last-of-type {
       margin-right: 0;
@@ -122,87 +124,81 @@ export const Options = styled.aside`
       font-size: 12px;
     }
   `}
-`
 
-export const Button = styled.button`
-  border: 0;
-  background: none;
-  justify-content: center;
-  align-items: center;
-  border-radius: var(--smooth-radius);
-
-  ${ props => props.theme.type === 'desktop' && css`
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    transform: translateY(0);
-    cursor: pointer;
-    position: relative;
-    transition: background var(--fast) ease;
-
-    :after {
-      content: attr(aria-label);
-      font-size: 13px;
-      line-height: 1.2em;
-      position: fixed;
-      top: 100%;
-      left: 50%;
-      transform:  translate(-50%, 2px);
-      background: var(--foreground);
-      color: var(--primary);
-      padding: 4px 8px;
-      opacity: 0;
-      pointer-events: none;
-      white-space: nowrap;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-      border-radius: var(--smooth-radius);
-      transition: opacity var(--fast) ease;
-    }
-
-    :hover, :focus {
-      background: rgba(255, 255, 255, .2);
-      :after {opacity: 1}
-    }
-  `}
-
-  ${ props => props.theme.type === 'mobile' && css`
-    display: block;
-    font-size: 14px;
-    line-height: 4em;
-    height: 4em;
-    padding: 0 10px;
-    background-color: transparent;
-    margin: 8px 0 0;
+  button:not([role="menuitem"]) {
+    justify-content: center;
+    align-items: center;
     border-radius: var(--smooth-radius);
-    transition: background-color var(--fast) ease;
-    width: 100%;
-    box-sizing: border-box;
-    color: var(--primary);
-    font-weight: 600;
-    font-family: var(--primary-font);
 
-    :hover {
-      background-color: var(--secondary);
-    }
+    ${ props => props.theme.type === 'desktop' && css`
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      transform: translateY(0);
+      cursor: pointer;
+      position: relative;
+      transition: background var(--fast) ease;
 
-    border: 0;
-    display: flex;
-    justify-content: start;
-    overflow: hidden;
+      :after {
+        content: attr(aria-label);
+        font-size: 13px;
+        line-height: 1.2em;
+        position: fixed;
+        top: 100%;
+        left: 50%;
+        transform:  translate(-50%, 2px);
+        background: var(--foreground);
+        color: var(--primary);
+        padding: 4px 8px;
+        opacity: 0;
+        pointer-events: none;
+        white-space: nowrap;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+        border-radius: var(--smooth-radius);
+        transition: opacity var(--fast) ease;
+      }
 
-    svg {
-      margin-right: 10px;
-    }
+      :hover, :focus {
+        background: var(--secondary);
+        :after {opacity: 1}
+      }
+    `}
 
-    :before {
-      content: attr(aria-label);
-      order: 1;
-    }
+    ${ props => props.theme.type === 'mobile' && css`
+      display: block;
+      font-size: 14px;
+      line-height: 4em;
+      height: 4em;
+      padding: 0 10px;
+      background-color: transparent;
+      margin: 8px 0 0;
+      border-radius: var(--smooth-radius);
+      transition: background-color var(--fast) ease;
+      width: 100%;
+      box-sizing: border-box;
+      color: var(--primary);
+      font-weight: 600;
+      font-family: var(--primary-font);
 
-    /*button[role="menuitem"] {
-      display: none;
-    }*/
-  `}
+      :hover {
+        background-color: var(--secondary);
+      }
+
+      border: 0;
+      display: flex;
+      justify-content: start;
+      overflow: hidden;
+
+      svg {
+        margin-right: 10px;
+      }
+
+      :before {
+        content: attr(aria-label);
+        order: 1;
+      }
+    `}
+  }
 `
 
 export const MenuButton = styled(Button)`

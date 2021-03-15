@@ -16,17 +16,13 @@ const Aside = ({ children, title, controller }) => (
     <Title id={ slugify(title).concat('-title') }>{ title }</Title>
 
     <CloseButton
-      aria-label='Fechar'
+      label='Fechar'
+      icon='x-circle'
+      size='34px'
+      solid
       onClick={ controller.hide }
       ref={ controller.closeButtonRef }
-    >
-      <Icon
-        name='x-circle'
-        color='white'
-        size='34px'
-        solid
-      />
-    </CloseButton>
+    />
 
     { children }
   </Container>

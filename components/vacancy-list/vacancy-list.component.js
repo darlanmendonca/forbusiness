@@ -66,20 +66,9 @@ const VacancyList = ({ title = 'Vagas', vacancies }) => {
   return (
     <Card.List title={ title }>
       <Card.Options>
-        <Button aria-label='Filtros'>
-          <Icon
-            name='slider'
-            color='var(--primary)'
-          />
-        </Button>
-
+        <Button label='Buscar vagas' icon='search' />
         <Link href='/vagas/publicacao' passHref>
-          <Button as='a' aria-label='Publicar vaga'>
-            <Icon
-              name='plus'
-              color='var(--primary)'
-            />
-          </Button>
+          <Button label='Publicar vaga' icon='plus' as='a' />
         </Link>
       </Card.Options>
 
