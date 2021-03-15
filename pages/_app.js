@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import '../styles/globals.css'
-import '../styles/tokens.css'
+import 'styles/globals.css'
+import 'styles/tokens.css'
 
 const App = ({ Component, pageProps }) => (
   <>
