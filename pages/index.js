@@ -2,9 +2,9 @@ import Page from 'components/page/page.component.js'
 import UserHeader from 'components/user-header/user-header.component.js'
 import Avatar from 'components/avatar/avatar.component.js'
 import Link from 'next/link'
-import { useUser } from 'hooks/user/user.hook.js'
+import useUser  from 'hooks/user/user.hook.js'
 import Card from 'components/card/card.component.js'
-import { useVacancies } from 'hooks/vacancies/vacancies.hook.js'
+import useVacancies  from 'hooks/vacancies/vacancies.hook.js'
 import VacancyList from 'components/vacancy-list/vacancy-list.component.js'
 
 /**

@@ -4,7 +4,7 @@
   * - image: Foto do usuário
   * - company: Nome da empresa
   */
-export const useUser = () => {
+const useUser = () => {
   return {
     id: 1,
     firstname: 'Moisés',
@@ -26,3 +26,5 @@ export const useUser = () => {
     },
   }
 }
+
+export default useUser

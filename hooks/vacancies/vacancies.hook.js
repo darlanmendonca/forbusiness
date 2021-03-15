@@ -2,7 +2,7 @@
   * Lista as vagas da empresa, sendo possível filtrar por
   * - status
   */
-export const useVacancies = () => {
+const useVacancies = () => {
   const moises = {
     id: 1,
     firstname: 'Moisés',
@@ -94,3 +94,5 @@ export const useVacancies = () => {
     },
   ]
 }
+
+export default useVacancies
