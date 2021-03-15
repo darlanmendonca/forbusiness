@@ -5,9 +5,12 @@ import Icon from 'components/icon/icon.component.js'
 import Link from 'next/link'
 import Avatar from 'components/avatar/avatar.component.js'
 import useUser  from 'hooks/user/user.hook.js'
+import Modal from 'components/modal/modal.component.js'
+import { useModal } from 'components/modal/modal.hook.js'
 
 const VacancyList = ({ title = 'Vagas', vacancies }) => {
   const user = useUser()
+  const search = useModal()
   const day = 'numeric'
   const month = 'long'
 
@@ -64,16 +67,20 @@ const VacancyList = ({ title = 'Vagas', vacancies }) => {
   )
 
   return (
-    <Card.List title={ title }>
-      <Card.Options>
-        <Button label='Buscar vagas' icon='search' />
-        <Link href='/vagas/publicacao' passHref>
-          <Button label='Publicar vaga' icon='plus' as='a' />
-        </Link>
-      </Card.Options>
+    <>
+      <Card.List title={ title }>
+        <Card.Options>
+          <Button label='Buscar vagas' icon='search' onClick={ search.show } />
+          <Link href='/vagas/publicacao' passHref>
+            <Button label='Publicar vaga' icon='plus' as='a' />
+          </Link>
+        </Card.Options>
 
-      { vacancies.map(toItems) }
-    </Card.List>
+        { vacancies.map(toItems) }
+      </Card.List>
+
+      <Modal title='Buscar vagas' controller={ search } />
+    </>
   )
 }
 

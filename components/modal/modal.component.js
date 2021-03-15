@@ -1,4 +1,4 @@
-import { Container, Title, CloseButton } from './aside.style.js'
+import { Container, Title, CloseButton } from './modal.style.js'
 
 const slugify = (string = '') => string
   .trim()

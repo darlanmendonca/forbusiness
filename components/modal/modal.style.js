@@ -3,11 +3,11 @@ import Button from 'components/button/button.component.js'
 
 export const Container = styled.div`
   position: fixed;
-  top: 0;
+  top: 55px;
   bottom: 0;
-  right: 0;
-  width: 430px;
-  max-width: 100vw;
+  left: 50%;
+  width: 100%;
+  max-width: calc(1200px - 20px);
   z-index: 10;
   background: var(--foreground);
   box-shadow: var(--elevation);
@@ -16,18 +16,15 @@ export const Container = styled.div`
   box-shadow: -1px 0 3px 0 rgba(0, 0, 0, 0.2);
   transition: transform var(--fast) ease;
   visibility: visible;
-  transform: translateX(0%);
+  transform: translate(-50%, 0%);
   overflow: auto;
-
-  @media (min-width: 500px) {
-    border-top-left-radius: var(--smooth-radius);
-    border-bottom-left-radius: var(--smooth-radius);
-  }
+  border-top-left-radius: var(--smooth-radius);
+  border-top-right-radius: var(--smooth-radius);
 
   &[hidden] {
     visibility: hidden;
     display: block;
-    transform: translateX(100%);
+    transform: translate(-50%, 100%);
     transition: transform var(--fast) ease, visibility 0s .3s;
   }
 `
