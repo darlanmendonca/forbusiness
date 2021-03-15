@@ -1,4 +1,4 @@
-import Card from '../card/card.component.js'
+import Card from 'components/card/card.component.js'
 
 const Anuncio = () =>  (
   <>

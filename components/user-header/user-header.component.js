@@ -1,9 +1,9 @@
-import MainHeader from '../main-header/main-header.component'
+import MainHeader from 'components/main-header/main-header.component'
 import useUser  from 'hooks/user/user.hook.js'
-import Menu from '../menu/menu.component.js'
-import { useMenu } from '../menu/menu.hook.js'
-import Aside from '../aside/aside.component.js'
-import { useAside } from '../aside/aside.hook.js'
+import Menu from 'components/menu/menu.component.js'
+import { useMenu } from 'components/menu/menu.hook.js'
+import Aside from 'components/aside/aside.component.js'
+import { useAside } from 'components/aside/aside.hook.js'
 import Button from 'components/button/button.component.js'
 
 /**

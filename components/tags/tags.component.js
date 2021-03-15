@@ -1,5 +1,5 @@
 import { List, Item } from './tags.style.js'
-import Icon from '../icon/icon.component.js'
+import Icon from 'components/icon/icon.component.js'
 
 const Tags = ({ label, children, icon, color }) => (
   <List aria-label={ label }>

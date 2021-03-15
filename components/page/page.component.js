@@ -1,6 +1,6 @@
 import { Container, Content, Header, Title, Text } from './page.style.js'
-import SegmentHeader from '../segment-header/segment-header.component'
-import CopywriterFooter from '../copywriter-footer/copywriter-footer.component.js'
+import SegmentHeader from 'components/segment-header/segment-header.component'
+import CopywriterFooter from 'components/copywriter-footer/copywriter-footer.component.js'
 import { node } from 'prop-types'
 
 /**

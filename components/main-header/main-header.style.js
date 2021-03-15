@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import { css } from '@emotion/react'
-import Avatar from '../avatar/avatar.component.js'
-import Button from '../button/button.component.js'
+import Avatar from 'components/avatar/avatar.component.js'
+import Button from 'components/button/button.component.js'
 
 export const Header = styled.header`
   position: sticky;

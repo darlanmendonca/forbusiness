@@ -1,5 +1,5 @@
 import { Container, Title, CloseButton } from './aside.style.js'
-import Icon from '../icon/icon.component.js'
+import Icon from 'components/icon/icon.component.js'
 
 const slugify = (string = '') => string
   .trim()

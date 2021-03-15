@@ -1,4 +1,4 @@
-import MainHeader from '../main-header/main-header.component'
+import MainHeader from 'components/main-header/main-header.component'
 
 /**
   * O componente `SiteHeader` exibe o links de navegação
