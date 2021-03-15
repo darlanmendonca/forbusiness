@@ -68,7 +68,7 @@ const VacancyList = ({ title = 'Vagas', vacancies }) => {
 
   return (
     <>
-      <Section title={ title } list>
+      <Section title={ title }>
         <Section.Options>
           <Button label='Buscar vagas' icon='search' onClick={ search.show } />
           <Link href='/vagas/publicacao' passHref>

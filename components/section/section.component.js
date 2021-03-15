@@ -6,8 +6,9 @@ import Card from 'components/card/card.component.js'
 const Section = ({ title, subtitle, children, list, ...props }) => {
   const options = child => child.type !== Options
   const sectionOptions = Children.toArray(children).find(child => child.type === Options)
+  const hasList = Children.toArray(children).some(child => child.type === Card.Item)
 
-  const CardElement = list ? Card.List : Card
+  const CardElement = hasList ? Card.List : Card
 
   return (
     <SectionElement>
