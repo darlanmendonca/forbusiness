@@ -1,3 +1,4 @@
+import Section from 'components/section/section.component.js'
 import Card from 'components/card/card.component.js'
 import Tags from 'components/tags/tags.component.js'
 import Button from 'components/button/button.component.js'
@@ -15,7 +16,7 @@ const VacancyList = ({ title = 'Vagas', vacancies }) => {
 
   const toItems = ({ name, location, level, id, owner, status, date }, index) => (
     <Card.Item key={ index }>
-      <Card.Subtitle>
+      <Card.Title>
         <Avatar
           label={ owner.firstname }
           image={ owner.image }
@@ -25,7 +26,7 @@ const VacancyList = ({ title = 'Vagas', vacancies }) => {
         />
 
         { name } { level }
-      </Card.Subtitle>
+      </Card.Title>
 
       <Tags label='Informações da vaga'>
         <Tags.Item
@@ -67,16 +68,16 @@ const VacancyList = ({ title = 'Vagas', vacancies }) => {
 
   return (
     <>
-      <Card.List title={ title }>
-        <Card.Options>
+      <Section title={ title } list>
+        <Section.Options>
           <Button label='Buscar vagas' icon='search' onClick={ search.show } />
           <Link href='/vagas/publicacao' passHref>
             <Button label='Publicar vaga' icon='plus' as='a' />
           </Link>
-        </Card.Options>
+        </Section.Options>
 
         { vacancies.map(toItems) }
-      </Card.List>
+      </Section>
 
       <Modal title='Buscar vagas' controller={ search } />
     </>

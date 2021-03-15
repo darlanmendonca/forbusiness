@@ -1,12 +1,12 @@
-import Card from 'componnents/card/card.component.js'
+import Section from 'components/section/section.component.js'
 
 const Gestao = () =>  (
   <>
-    <Card title='Período de inscrição' style={{ minHeight: 200 }} />
-    <Card title='Fichas e testes' style={{ minHeight: 200 }} />
-    <Card title='Fases' style={{ minHeight: 200 }} />
-    <Card title='Parceiros' style={{ minHeight: 350 }} />
-    <Card title='Indicação de profissionais' style={{ minHeight: 200 }} />
+    <Section title='Período de inscrição' />
+    <Section title='Fichas e testes' />
+    <Section title='Fases' />
+    <Section title='Parceiros' />
+    <Section title='Indicação de profissionais' />
   </>
 )
 

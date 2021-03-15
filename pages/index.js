@@ -3,6 +3,7 @@ import UserHeader from 'components/user-header/user-header.component.js'
 import Avatar from 'components/avatar/avatar.component.js'
 import Link from 'next/link'
 import useUser  from 'hooks/user/user.hook.js'
+import Section from 'components/section/section.component.js'
 import Card from 'components/card/card.component.js'
 import useVacancies  from 'hooks/vacancies/vacancies.hook.js'
 import VacancyList from 'components/vacancy-list/vacancy-list.component.js'
@@ -38,10 +39,10 @@ const Home = () => {
       </Page.Header>
 
       <Page.Content>
-        <Card.Carousel>
-          <Card subtitle='SLA de vagas' style={{ height: 310 }} />
-          <Card subtitle='Novas candidaturas' style={{ height: 310 }} />
-        </Card.Carousel>
+        <Section.List label='Gráficos'>
+          <Section.Item title='SLA de vagas' style={{ height: 310 }} />
+          <Section.Item title='Novas candidaturas' style={{ height: 310 }} />
+        </Section.List>
 
         <VacancyList
           title='Suas vagas'

@@ -22,10 +22,7 @@ const Login = () => (
           src='working_together_from_home.svg'
         />
       </div>
-      <Card subtitle='Login' style={{
-        width: '50%',
-        minHeight: 340,
-      }} />
+      <Card title='Login' style={{ width: '50%' }} />
     </Page.Content>
   </Page>
 )

@@ -1,11 +1,11 @@
-import Card from 'components/card/card.component.js'
+import Section from 'components/section/section.component.js'
 
 const Anuncio = () =>  (
   <>
-    <Card title='Sobre o cargo' style={{ minHeight: 350 }} />
-    <Card title='Requisitos' style={{ minHeight: 350 }} />
-    <Card title='Benefícios' style={{ minHeight: 200 }} />
-    <Card title='Sobre a empresa' style={{ minHeight: 200 }} />
+    <Section title='Sobre o cargo' />
+    <Section title='Requisitos' />
+    <Section title='Benefícios' />
+    <Section title='Sobre a empresa' />
   </>
 )
 

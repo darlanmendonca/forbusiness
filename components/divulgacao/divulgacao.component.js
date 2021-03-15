@@ -1,10 +1,10 @@
-import Card from 'components/card/card.component.js'
+import Section from 'components/section/section.component.js'
 
 const Divulgacao = () =>  (
   <>
-    <Card title='Comunicação com candidatos' style={{ minHeight: 200 }} />
-    <Card title='Gestão de acessos' style={{ minHeight: 200 }} />
-    <Card title='Canais de divulgação' style={{ minHeight: 350 }} />
+    <Section title='Comunicação com candidatos' />
+    <Section title='Gestão de acessos' />
+    <Section title='Canais de divulgação' />
   </>
 )
 

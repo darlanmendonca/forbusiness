@@ -1,4 +1,4 @@
-import { Container, Section, Title, Subtitle, Illustration, Options, Item, Text, Tag, Carousel } from './card.style.js'
+import { Card as CardElement, Title, Illustration, Item, Text, Tag, Carousel } from './card.style.js'
 import { string, node } from 'prop-types'
 import { Children } from 'react'
 
@@ -6,40 +6,20 @@ import { Children } from 'react'
   * O componente `Card` serve para destacar uma informação, ou um grupo dentre outras.
   * Possui um elevação que coloca o conteúdo em foreground em relação ao background.
   */
-const Card = ({ title, subtitle, children, ...props }) => {
-  const options = child => child.type !== Card.Options
-  const cardOptions = Children.toArray(children).find(child => child.type === Card.Options)
-
-  return (
-    <Container>
-      { title &&
-        <Title>{ title }</Title>
-      }
-
-      { cardOptions &&
-        <>
-          { cardOptions }
-        </>
-      }
-
-      <Section { ...props }>
-        { subtitle &&
-          <Subtitle>{ subtitle }</Subtitle>
-        }
-        { Children.toArray(children).filter(options) }
-      </Section>
-    </Container>
-  )
-}
+const Card = ({ title, children, ...props }) => (
+  <CardElement { ...props }>
+    { title &&
+      <Title>{ title }</Title>
+    }
+    { children }
+  </CardElement>
+)
 
 export default Card
 
 Card.propTypes = {
-  // Define um título, visível externamente ao card
+  // Define um título para o card
   title: string,
-
-  // Define um subtítulo, visível internamente ao card
-  subtitle: string,
 
   // Define o conteúdo do card
   children: node,
@@ -50,17 +30,10 @@ Card.propTypes = {
   */
 Card.Illustration = Illustration
 
-/**
-  * Exibe um header com opções relativas ao card
-  */
-Card.Options = Options
-
 Card.List = props => <Card as='ul' { ...props} />
 
 Card.Item = Item
 
-Card.Subtitle = Subtitle
+Card.Title = Title
 
 Card.Text = Text
-
-Card.Carousel = Carousel

@@ -6,9 +6,9 @@ export const Container = styled.div`
   min-height: 100vh;
 `
 
-export const Content = styled.div`
+export const Content = styled.main`
   flex: 1;
-  margin: 0 auto;
+  margin: 34px auto;
   max-width: 1200px;
   padding: 0 10px;
   box-sizing: border-box;

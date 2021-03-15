@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 export const Footer = styled.footer`
   color: var(--secondary);
   font-family: var(--primary-font);
-  margin: 34px auto 0;
+  margin: 0 auto;
   max-width: calc(1200px - 20px);
   padding: 20px 10px;
   box-sizing: border-box;

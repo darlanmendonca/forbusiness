@@ -1,10 +1,10 @@
-import Card from 'components/card/card.component.js'
+import Section from 'components/section/section.component.js'
 
 const Confirmacao = () =>  (
   <>
-    <Card title='Anúncio' style={{ minHeight: 350 }} />
-    <Card title='Gestão' style={{ minHeight: 350 }} />
-    <Card title='Divulgação' style={{ minHeight: 350 }} />
+    <Section title='Anúncio' />
+    <Section title='Gestão' />
+    <Section title='Divulgação' />
   </>
 )
 
