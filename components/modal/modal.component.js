@@ -1,4 +1,5 @@
 import { Container, Title, CloseButton } from './modal.style.js'
+import hook from './modal.hook.js'
 
 const slugify = (string = '') => string
   .trim()
@@ -28,3 +29,5 @@ const Aside = ({ children, title, controller }) => (
 )
 
 export default Aside
+
+export const useModal = hook

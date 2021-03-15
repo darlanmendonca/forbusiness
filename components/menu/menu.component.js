@@ -1,6 +1,7 @@
 import { List, MenuList, Container } from './menu.style.js'
 import Link from 'next/link'
 import { string, node, object } from 'prop-types'
+import hook from './menu.hook.js'
 
 /** O componente `Menu` exibe um menu contextual ao clicar no botão,
   * contendo opções relacionadas.
@@ -18,6 +19,8 @@ const Menu = ({ label, children, controller }) => (
 )
 
 export default Menu
+
+export const useMenu = hook
 
 Menu.propTypes = {
   // Define o texto do botão que abre o menu

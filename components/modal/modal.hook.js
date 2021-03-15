@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 
-export const useModal = () => {
+const useModal = () => {
   const [ isVisible, setIsVisible ] = useState(false)
   const [ openButton, setOpenButton ] = useState()
   const closeButtonRef = useRef()
@@ -50,3 +50,5 @@ export const useModal = () => {
     closeButtonRef,
   }
 }
+
+export default useModal

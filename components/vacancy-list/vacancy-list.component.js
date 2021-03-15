@@ -5,8 +5,7 @@ import Icon from 'components/icon/icon.component.js'
 import Link from 'next/link'
 import Avatar from 'components/avatar/avatar.component.js'
 import useUser  from 'hooks/user/user.hook.js'
-import Modal from 'components/modal/modal.component.js'
-import { useModal } from 'components/modal/modal.hook.js'
+import Modal, { useModal } from 'components/modal/modal.component.js'
 
 const VacancyList = ({ title = 'Vagas', vacancies }) => {
   const user = useUser()

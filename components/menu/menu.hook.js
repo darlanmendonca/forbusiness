@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-export const useMenu = () => {
+const useMenu = () => {
   const [ isVisible, setIsVisible ] = useState(false)
 
   const toggle = () => setIsVisible(!isVisible)
@@ -44,3 +44,5 @@ export const useMenu = () => {
     buttonProps,
   }
 }
+
+export default useMenu

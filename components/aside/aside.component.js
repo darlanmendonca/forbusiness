@@ -1,4 +1,5 @@
 import { Container, Title, CloseButton } from './aside.style.js'
+import hook from './aside.hook.js'
 
 const slugify = (string = '') => string
   .trim()
@@ -28,3 +29,5 @@ const Aside = ({ children, title, controller }) => (
 )
 
 export default Aside
+
+export const useAside = hook
