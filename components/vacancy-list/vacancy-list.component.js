@@ -1,10 +1,10 @@
-import Card from '../../components/card/card.component.js'
-import Tags from '../../components/tags/tags.component.js'
-import Button from '../../components/button/button.component.js'
-import Icon from '../../components/icon/icon.component.js'
+import Card from 'components/card/card.component.js'
+import Tags from 'components/tags/tags.component.js'
+import Button from 'components/button/button.component.js'
+import Icon from 'components/icon/icon.component.js'
 import Link from 'next/link'
-import Avatar from '../../components/avatar/avatar.component.js'
-import { useUser } from '../../hooks/user/user.hook.js'
+import Avatar from 'components/avatar/avatar.component.js'
+import { useUser } from 'hooks/user/user.hook.js'
 
 const VacancyList = ({ title = 'Vagas', vacancies }) => {
   const user = useUser()

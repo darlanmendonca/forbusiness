@@ -1,7 +1,7 @@
-import Page from '../components/page/page.component.js'
+import Page from 'components/page/page.component.js'
 import Head from 'next/head'
-import UserHeader from '../components/user-header/user-header.component.js'
-import Card from '../components/card/card.component.js'
+import UserHeader from 'components/user-header/user-header.component.js'
+import Card from 'components/card/card.component.js'
 
 /**
   * Exibe os termos de uso da plataforma

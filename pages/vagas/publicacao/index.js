@@ -1,9 +1,9 @@
-import Page from '../../../components/page/page.component.js'
+import Page from 'components/page/page.component.js'
 import Head from 'next/head'
-import UserHeader from '../../../components/user-header/user-header.component.js'
-import Card from '../../../components/card/card.component.js'
-import Icon from '../../../components/icon/icon.component.js'
-import { useUser } from '../../../hooks/user/user.hook.js'
+import UserHeader from 'components/user-header/user-header.component.js'
+import Card from 'components/card/card.component.js'
+import Icon from 'components/icon/icon.component.js'
+import { useUser } from 'hooks/user/user.hook.js'
 import Link from 'next/link'
 
 /**

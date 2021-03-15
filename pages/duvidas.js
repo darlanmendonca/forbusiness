@@ -1,6 +1,6 @@
-import Page from '../components/page/page.component.js'
+import Page from 'components/page/page.component.js'
 import Head from 'next/head'
-import SiteHeader from '../components/site-header/site-header.component'
+import SiteHeader from 'components/site-header/site-header.component'
 
 /**
   * Exibe informativos gerais sobre a plataforma, tais como

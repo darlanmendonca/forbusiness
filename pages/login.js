@@ -1,7 +1,7 @@
-import Page from '../components/page/page.component.js'
+import Page from 'components/page/page.component.js'
 import Head from 'next/head'
-import SiteHeader from '../components/site-header/site-header.component'
-import Card from '../components/card/card.component.js'
+import SiteHeader from 'components/site-header/site-header.component'
+import Card from 'components/card/card.component.js'
 
 /**
   * Exibe a tela de acesso para usuários
