@@ -35,9 +35,11 @@ export const FlatButton = styled.button`
     transition: opacity var(--fast) ease;
   }
 
-  :hover, :focus {
-    :after {
-      opacity: 1;
+  @media (hover: hover) {
+    :hover, :focus {
+      :after {
+        opacity: 1;
+      }
     }
   }
 

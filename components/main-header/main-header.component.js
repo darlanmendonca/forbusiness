@@ -36,7 +36,7 @@ const MainHeader = ({ children }) => {
           <Button
             label='Menu'
             icon='menu'
-            size='44px'
+            size='48px'
             onClick={ mobileMenu.show }
           />
         </Container>
