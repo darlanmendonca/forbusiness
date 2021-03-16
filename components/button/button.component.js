@@ -6,6 +6,7 @@ const Button = forwardRef(({ children, label, icon, solid, size, ...props }, ref
   <FlatButton
     aria-label={ label }
     ref={ ref }
+    size={ size }
     { ...props }
   >
     { icon &&

@@ -1,4 +1,5 @@
-import { Header, Container, Logotype, Navigation, NavigationLink, Options, MenuButton, AvatarButton } from './main-header.style.js'
+import { Header, Container, Logotype, Navigation, NavigationLink, Options, AvatarButton } from './main-header.style.js'
+import Button from 'components/button/button.component.js'
 import Link from 'next/link'
 import Icon from 'components/icon/icon.component.js'
 import { useRouter } from 'next/router'
@@ -32,10 +33,10 @@ const MainHeader = ({ children }) => {
             { children }
           </ThemeProvider>
 
-          <MenuButton
+          <Button
             label='Menu'
             icon='menu'
-            size='34px'
+            size='44px'
             onClick={ mobileMenu.show }
           />
         </Container>

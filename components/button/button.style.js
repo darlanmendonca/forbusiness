@@ -5,8 +5,8 @@ export const FlatButton = styled.button`
   position: relative;
   border: 0;
   background: none;
-  width: 40px;
-  height: 40px;
+  width: ${ props => props.size || '40px' };
+  height: ${ props => props.size || '40px' };
   align-items: center;
   justify-content: center;
   border-radius: var(--smooth-radius);

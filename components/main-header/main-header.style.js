@@ -27,6 +27,12 @@ export const Container = styled.div`
       display: none;
     }
   }
+
+  @media (min-width: 1201px) {
+    button[aria-label="Menu"] {
+      display: none;
+    }
+  }
 `
 
 export const Logotype = styled.a`
@@ -198,12 +204,6 @@ export const Options = styled.aside`
         order: 1;
       }
     `}
-  }
-`
-
-export const MenuButton = styled(Button)`
-  @media (min-width: 1201px) {
-    display: none;
   }
 `
 
