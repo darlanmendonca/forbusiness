@@ -16,26 +16,27 @@ export const FlatButton = styled.button`
   transform: translateZ(0);
   z-index: 1;
 
-  :after {
-    content: attr(aria-label);
-    font-size: 13px;
-    line-height: 1.2em;
-    position: fixed;
-    top: calc(100% + 1px);
-    left: 50%;
-    transform:  translate(-50%, 2px);
-    background: var(--foreground);
-    color: var(--primary);
-    padding: 4px 8px;
-    border-radius: var(--smooth-radius);
-    opacity: 0;
-    pointer-events: none;
-    white-space: nowrap;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-    transition: opacity var(--fast) ease;
-  }
 
   @media (hover: hover) {
+    :after {
+      content: attr(aria-label);
+      font-size: 13px;
+      line-height: 1.2em;
+      position: fixed;
+      top: calc(100% + 1px);
+      left: 50%;
+      transform:  translate(-50%, 2px);
+      background: var(--foreground);
+      color: var(--primary);
+      padding: 4px 8px;
+      border-radius: var(--smooth-radius);
+      opacity: 0;
+      pointer-events: none;
+      white-space: nowrap;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+      transition: opacity var(--fast) ease;
+    }
+
     :hover, :focus {
       :after {
         opacity: 1;
