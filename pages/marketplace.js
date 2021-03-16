@@ -1,6 +1,7 @@
 import Page from 'components/page/page.component.js'
 import Head from 'next/head'
 import UserHeader from 'components/user-header/user-header.component.js'
+import Section from 'components/section/section.component.js'
 
 /**
   * Exibe produtos de parceiros que podem ser adquiridos e
@@ -20,7 +21,10 @@ const Marketplace = () => (
     </Page.Header>
 
     <Page.Content>
-
+      <Section title='Admissão Digital' />
+      <Section title='Avaliação de Perfil / Competências Técnicas' />
+      <Section title='Formalização de Estágio' />
+      <Section title='Gamificação' />
     </Page.Content>
   </Page>
 )

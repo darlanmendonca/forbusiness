@@ -45,13 +45,16 @@ export const Link = styled.a`
     transition: all var(--fast) ease;
   }
 
-  :hover, :focus {
-    text-decoration: none;
+  @media (hover: hover) {
+    :hover, :focus {
+      text-decoration: none;
 
-    :after {
-      box-shadow: 0 0 0 2px var(--accent);
+      :after {
+        box-shadow: 0 0 0 2px var(--accent);
+      }
     }
   }
+
 `
 
 export const Title = styled.h2`
@@ -101,11 +104,12 @@ export const Item = styled.li`
     text-decoration: none;
     outline-offset: 4px;
 
-    :hover {
-      :after {
+    @media (hover: hover) {
+      :hover:after {
         box-shadow: 0 0 0 2px var(--accent);
       }
     }
+
 
     :after {
       content: '';

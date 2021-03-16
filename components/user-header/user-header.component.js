@@ -29,9 +29,9 @@ const UserHeader = () => {
           <MainHeader.Link label='Início' href='/'  />
           <MainHeader.Link label='Vagas' href='/vagas' />
           <MainHeader.Link label='Profissionais' href='/profissionais' />
+          <MainHeader.Link label='Marketplace' href='/marketplace' />
           <MainHeader.Link label='Relatórios' href='/relatorios' />
           <MainHeader.Link label='Configurações' href='/configuracoes' />
-          <MainHeader.Link label='Marketplace' href='/marketplace' />
         </MainHeader.Navigation>
 
         <MainHeader.Options aria-label='Outros recursos'>

@@ -8,7 +8,7 @@ import * as Solid from '@styled-icons/boxicons-solid'
   */
 const Icon = ({ name, solid, color='currentColor', size = '1em', ...props}) => {
   const toCamelCase = string => '-'.concat(string)
-    .replace(/-([a-z])/g, (_, letter) => letter.toUpperCase())
+    .replace(/-([a-z0-9])/g, (_, letter) => letter.toUpperCase())
 
   const icon = toCamelCase(name)
 
