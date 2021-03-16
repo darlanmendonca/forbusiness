@@ -136,40 +136,6 @@ export const Options = styled.aside`
     align-items: center;
     border-radius: var(--smooth-radius);
 
-    ${ props => props.theme.type === 'desktop' && css`
-      width: 40px;
-      height: 40px;
-      display: inline-flex;
-      transform: translateY(0);
-      cursor: pointer;
-      position: relative;
-      transition: background var(--fast) ease;
-
-      :after {
-        content: attr(aria-label);
-        font-size: 13px;
-        line-height: 1.2em;
-        position: fixed;
-        top: 100%;
-        left: 50%;
-        transform:  translate(-50%, 2px);
-        background: var(--foreground);
-        color: var(--primary);
-        padding: 4px 8px;
-        opacity: 0;
-        pointer-events: none;
-        white-space: nowrap;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
-        border-radius: var(--smooth-radius);
-        transition: opacity var(--fast) ease;
-      }
-
-      :hover, :focus {
-        background: var(--secondary);
-        :after {opacity: 1}
-      }
-    `}
-
     ${ props => props.theme.type === 'mobile' && css`
       display: block;
       font-size: 14px;
