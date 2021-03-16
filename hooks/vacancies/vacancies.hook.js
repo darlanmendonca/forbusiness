@@ -119,21 +119,21 @@ const useVacancies = (params = {}) => {
 
   const recurrents = [
     {
-      // id: 'v2167411',
+      id: 'v2167411',
       name: 'Analista de Testes',
       level: 'Sênior',
       location: 'Home Office',
       owner: moises,
     },
     {
-      // id: 'v2167411',
+      id: 'v2167411',
       name: 'Analista de Testes',
       level: 'Sênior',
       location: 'Home Office',
       owner: moises,
     },
     {
-      // id: 'v2167411',
+      id: 'v2167411',
       name: 'Engenheiro(a) Frontend',
       level: 'Sênior',
       location: 'Home Office',

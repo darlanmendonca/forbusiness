@@ -9,13 +9,13 @@ import Card from 'components/card/card.component.js'
 const TermosDeUso = () => (
   <Page>
     <Head>
-      <title>Termos de uso - { process.env.NEXT_PUBLIC_APP_NAME }</title>
+      <title>Termos de Uso - { process.env.NEXT_PUBLIC_APP_NAME }</title>
     </Head>
 
     <UserHeader />
 
     <Page.Header>
-      <h2>Termos de uso</h2>
+      <h2>Termos de Uso</h2>
     </Page.Header>
 
     <Page.Content>

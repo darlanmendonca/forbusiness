@@ -4,7 +4,6 @@ import UserHeader from 'components/user-header/user-header.component.js'
 import Section from 'components/section/section.component.js'
 import Card from 'components/card/card.component.js'
 import Icon from 'components/icon/icon.component.js'
-import Link from 'next/link'
 
 /**
   * Exibe uma busca avançada por profissionais em diferentes fontes,
@@ -31,6 +30,7 @@ const Profissionais = () => (
           <Icon name='data'
             solid
             size='68px'
+            color='var(--secondary)'
             style={{ display: 'block', margin: '0 auto 1rem' }}
           />
 
@@ -47,6 +47,7 @@ const Profissionais = () => (
           <Icon name='file'
             solid
             size='68px'
+            color='var(--secondary)'
             style={{ display: 'block', margin: '0 auto 1rem' }}
           />
 
@@ -63,6 +64,7 @@ const Profissionais = () => (
           <Icon name='user-badge'
             solid
             size='68px'
+            color='var(--secondary)'
             style={{ display: 'block', margin: '0 auto 1rem' }}
           />
 

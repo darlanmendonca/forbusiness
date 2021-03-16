@@ -4,26 +4,27 @@ import UserHeader from 'components/user-header/user-header.component.js'
 import useVacancies from 'hooks/vacancies/vacancies.hook.js'
 import VacancyList from 'components/vacancy-list/vacancy-list.component.js'
 
-const Recorrentes = () => {
-  const { recurrents } = useVacancies()
+const Modelos = () => {
+  const { templates } = useVacancies()
 
   return (
     <>
       <Head>
-        <title>Vagas recorrentes - { process.env.NEXT_PUBLIC_APP_NAME }</title>
+        <title>Modelos de Vaga - { process.env.NEXT_PUBLIC_APP_NAME }</title>
       </Head>
 
       <Page>
         <UserHeader />
 
         <Page.Header>
-          <h2>Vagas recorrentes</h2>
+          <h2>Modelos de vaga</h2>
         </Page.Header>
 
         <Page.Content>
           <VacancyList
-            title='Vagas recorrentes'
-            vacancies={ recurrents }
+            title='Modelos de vaga'
+            vacancies={ templates }
+            type='templates'
           />
         </Page.Content>
       </Page>
@@ -31,4 +32,4 @@ const Recorrentes = () => {
   )
 }
 
-export default Recorrentes
+export default Modelos

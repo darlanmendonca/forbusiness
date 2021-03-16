@@ -8,9 +8,9 @@ export const Container = styled.div`
 
 export const Content = styled.main`
   flex: 1;
-  margin: 34px auto;
+  margin: 14px auto;
   max-width: 1200px;
-  padding: 0 10px;
+  padding: 10px;
   box-sizing: border-box;
   width: 100%;
   color: var(--primary);

@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 
 export const FlatButton = styled.button`
   display: inline-flex;
-  margin-left: 10px;
   position: relative;
   border: 0;
   background: none;

@@ -1,4 +1,4 @@
-import { Card as CardElement, Title, Illustration, Item, Text, Link } from './card.style.js'
+import { Card as CardElement, List, Title, Illustration, Item, Text, Link } from './card.style.js'
 import { string, node } from 'prop-types'
 import { Children } from 'react'
 import NextLink from 'next/link'
@@ -31,7 +31,7 @@ Card.propTypes = {
   */
 Card.Illustration = Illustration
 
-Card.List = props => <Card as='ul' { ...props} />
+Card.List = List
 
 Card.Item = Item
 

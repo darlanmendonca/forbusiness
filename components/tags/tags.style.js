@@ -6,8 +6,10 @@ export const List = styled.ul`
   overflow-x: auto;
   overflow-y: hidden;
   transform: translateX(-1rem);
-  width: calc(100% + 2rem);
+  width: fit-content;
+  max-width: calc(100% + 2rem);
   box-sizing: border-box;
+  position: relative;
 
   ::-webkit-scrollbar {
     display: none;

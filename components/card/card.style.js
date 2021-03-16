@@ -13,13 +13,25 @@ export const Card = styled.div`
   min-height: 100%;
   margin: 0;
 
+  :empty {
+    min-height: 200px;
+  }
+
   @media (prefers-color-scheme: light) {
     --secondary: var(--tertiary);
   }
 `
 
+export const List = styled(Card)`
+  padding: 0 1rem;
+`
+
+List.defaultProps = {
+  as: 'ul',
+}
+
 export const Link = styled.a`
-  color: var(--accent);
+  color: var(--primary);
   text-decoration: none;
 
   :after {
@@ -35,10 +47,8 @@ export const Link = styled.a`
 
   :hover, :focus {
     text-decoration: none;
-    color: var(--accent);
 
     :after {
-      /*background: var(--secondary);*/
       box-shadow: 0 0 0 2px var(--accent);
     }
   }
@@ -69,19 +79,44 @@ export const Item = styled.li`
   list-style: none;
   padding: 16px 0;
   margin: 0;
-  border-top: 1px solid var(--secondary);
+  border-bottom: 1px solid var(--secondary);
   box-sizing: border-box;
+  position: relative;
 
   :first-of-type {
-    border-top: 0;
-    padding-top: 8px;
+    padding-top: 16px;
   }
 
   :last-of-type {
-    padding-bottom: 8px;
+    border-bottom: 0;
+    padding-bottom: 16px;
   }
 
   p {
     margin-left: 48px;
+  }
+
+  h2 a {
+    color: var(--primary);
+    text-decoration: none;
+    outline-offset: 4px;
+
+    :hover {
+      :after {
+        box-shadow: 0 0 0 2px var(--accent);
+      }
+    }
+
+    :after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -1rem;
+      right: -1rem;
+      bottom: 0;
+      border-radius: var(--smooth-radius);
+      box-shadow: 0 0 0 0 var(--accent);
+      transition: box-shadow var(--fast) ease;
+    }
   }
 `
