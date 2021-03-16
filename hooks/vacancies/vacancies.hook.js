@@ -2,7 +2,7 @@
   * Lista as vagas da empresa, sendo possível filtrar por
   * - status
   */
-const useVacancies = () => {
+const useVacancies = (params = {}) => {
   const moises = {
     id: 1,
     firstname: 'Moisés',
@@ -21,9 +21,9 @@ const useVacancies = () => {
     image: 'https://i.pinimg.com/originals/5d/ac/fc/5dacfc043a93698713fb4a1ae7f9eb3f.jpg',
   }
 
-  return [
+  const vacancies = [
     {
-      id: 2167406,
+      id: 'v2167406',
       name: 'Auxiliar administrativo',
       status: 'Agendada',
       date: {
@@ -34,7 +34,7 @@ const useVacancies = () => {
       owner: baby,
     },
     {
-      id: 2167408,
+      id: 'v2167408',
       name: 'Recepcionista',
       status: 'Encerrada',
       date: {
@@ -45,7 +45,7 @@ const useVacancies = () => {
       owner: juliana,
     },
     {
-      id: 2167409,
+      id: 'v2167409',
       name: 'Analista de Testes',
       level: 'Júnior',
       status: 'Em andamento',
@@ -57,7 +57,7 @@ const useVacancies = () => {
       owner: moises,
     },
     {
-      id: 2167410,
+      id: 'v2167410',
       name: 'Analista de Testes',
       level: 'Pleno',
       status: 'Em andamento',
@@ -69,7 +69,7 @@ const useVacancies = () => {
       owner: moises,
     },
     {
-      id: 2167411,
+      id: 'v2167411',
       name: 'Analista de Testes',
       level: 'Sênior',
       status: 'Em andamento',
@@ -81,7 +81,7 @@ const useVacancies = () => {
       owner: moises,
     },
     {
-      id: 2167411,
+      id: 'v2167411',
       name: 'Engenheiro(a) Frontend',
       level: 'Sênior',
       status: 'Em andamento',
@@ -93,6 +93,59 @@ const useVacancies = () => {
       owner: moises,
     },
   ]
+
+  const templates = [
+    {
+      id: 'm2167406',
+      name: 'Auxiliar administrativo',
+      location: 'Salvador',
+      owner: baby,
+    },
+    {
+      id: 'm2167311',
+      name: 'Engenheiro(a) Frontend',
+      level: 'Sênior',
+      location: 'São Paulo',
+      owner: moises,
+    },
+    {
+      id: 'm2167312',
+      name: 'Engenheiro(a) Frontend',
+      level: 'Sênior',
+      location: 'Home Office',
+      owner: moises,
+    },
+  ]
+
+  const recurrents = [
+    {
+      // id: 'v2167411',
+      name: 'Analista de Testes',
+      level: 'Sênior',
+      location: 'Home Office',
+      owner: moises,
+    },
+    {
+      // id: 'v2167411',
+      name: 'Analista de Testes',
+      level: 'Sênior',
+      location: 'Home Office',
+      owner: moises,
+    },
+    {
+      // id: 'v2167411',
+      name: 'Engenheiro(a) Frontend',
+      level: 'Sênior',
+      location: 'Home Office',
+      owner: moises,
+    },
+  ]
+
+  return {
+    vacancies,
+    templates,
+    recurrents,
+  }
 }
 
 export default useVacancies

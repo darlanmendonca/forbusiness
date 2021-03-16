@@ -18,6 +18,32 @@ export const Card = styled.div`
   }
 `
 
+export const Link = styled.a`
+  color: var(--accent);
+  text-decoration: none;
+
+  :after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--smooth-radius);
+    transition: all var(--fast) ease;
+  }
+
+  :hover, :focus {
+    text-decoration: none;
+    color: var(--accent);
+
+    :after {
+      /*background: var(--secondary);*/
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+  }
+`
+
 export const Title = styled.h2`
   font-weight: 600;
   font-size: 18px;
@@ -28,15 +54,6 @@ export const Title = styled.h2`
   display: flex;
   align-items: center;
   margin-bottom: 8px;
-
-  a {
-    color: var(--primary);
-    text-decoration: none;
-
-    :hover, :focus  {
-      text-decoration: underline;
-    }
-  }
 `
 
 export const Text = styled.p`

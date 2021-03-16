@@ -32,6 +32,7 @@ export const List = styled.ul`
   padding: 0;
   margin: 0;
   list-style: none;
+  padding: 2px 0;
 
   @media (max-width: 700px) {
     overflow-x: auto;

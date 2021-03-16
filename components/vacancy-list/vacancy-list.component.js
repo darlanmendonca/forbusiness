@@ -13,6 +13,11 @@ const VacancyList = ({ title = 'Vagas', vacancies }) => {
   const search = useModal()
   const day = 'numeric'
   const month = 'long'
+  const vacancyType = vacancies.every(({ id }) => id?.startsWith('v'))
+    ? 'vacancy'
+    : vacancies.every(({ id }) => id?.startsWith('m'))
+      ? 'template'
+      : 'recurrent'
 
   const toItems = ({ name, location, level, id, owner, status, date }, index) => (
     <Card.Item key={ index }>
@@ -29,39 +34,57 @@ const VacancyList = ({ title = 'Vagas', vacancies }) => {
       </Card.Title>
 
       <Tags label='Informações da vaga'>
-        <Tags.Item
-          label='Código da vaga'
-          color='var(--accent)'
-          icon='note'
-        >
-          v{ id }
-        </Tags.Item>
+        { id?.startsWith('v') &&
+          <Tags.Item
+            label='Código da vaga'
+            color='var(--accent)'
+            icon='note'
+          >
+            { id }
+          </Tags.Item>
+        }
 
-        <Tags.Item
-          label='Local de trabalho'
-          color='var(--blue)'
-          icon='map'
-        >
-          { location }
-        </Tags.Item>
+        { id?.startsWith('m') &&
+          <Tags.Item
+            label='Código do modelo'
+            color='var(--light-blue)'
+            icon='note'
+          >
+            { id }
+          </Tags.Item>
+        }
 
-        <Tags.Item
-          label='Período de inscrições'
-          icon='time-five'
-          color={ status === 'Encerrada' ? 'var(--yellow)' : 'var(--green)' }
-        >
-          { date.open.toLocaleDateString('pt-BR', { day }) }
-          { ' a ' }
-          { date.expiration.toLocaleDateString('pt-BR', { day, month }) }
-        </Tags.Item>
+        { location &&
+          <Tags.Item
+            label='Local de trabalho'
+            color='var(--blue)'
+            icon='map'
+          >
+            { location }
+          </Tags.Item>
+        }
 
-        <Tags.Item
-          label='Status'
-          color='var(--light-blue)'
-          icon='info-circle'
-        >
-          { status }
-        </Tags.Item>
+        { date?.open && date?.expiration &&
+          <Tags.Item
+            label='Período de inscrições'
+            icon='time-five'
+            color={ status === 'Encerrada' ? 'var(--yellow)' : 'var(--green)' }
+          >
+            { date.open.toLocaleDateString('pt-BR', { day }) }
+            { ' a ' }
+            { date.expiration.toLocaleDateString('pt-BR', { day, month }) }
+          </Tags.Item>
+        }
+
+        { status &&
+          <Tags.Item
+            label='Status'
+            color='var(--light-blue)'
+            icon='info-circle'
+          >
+            { status }
+          </Tags.Item>
+        }
       </Tags>
     </Card.Item>
   )
@@ -69,17 +92,31 @@ const VacancyList = ({ title = 'Vagas', vacancies }) => {
   return (
     <>
       <Section title={ title }>
-        <Section.Options>
-          <Button label='Buscar vagas' icon='search' onClick={ search.show } />
-          <Link href='/vagas/publicacao' passHref>
-            <Button label='Publicar vaga' icon='plus' as='a' />
-          </Link>
-        </Section.Options>
+        { vacancyType === 'vacancy' &&
+          <Section.Options>
+            <Button label='Buscar vagas' icon='search' onClick={ search.show } />
+            <Link href='/vagas/publicacao' passHref>
+              <Button label='Publicar vaga' icon='plus' as='a' />
+            </Link>
+          </Section.Options>
+        }
+
+        { vacancyType === 'template' &&
+          <Section.Options>
+            <Button label='Buscar modelos' icon='search' onClick={ search.show } />
+          </Section.Options>
+        }
 
         { vacancies.map(toItems) }
       </Section>
 
-      <Modal title='Buscar vagas' controller={ search } />
+      { vacancyType === 'vacancy' &&
+        <Modal title='Buscar vagas' controller={ search } />
+      }
+
+      { vacancyType === 'template' &&
+        <Modal title='Buscar modelos' controller={ search } />
+      }
     </>
   )
 }

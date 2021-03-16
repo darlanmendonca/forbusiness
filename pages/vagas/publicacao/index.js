@@ -37,7 +37,7 @@ const Publicacao = () => {
               />
 
               <Card.Title  style={{ justifyContent: 'center' }}>
-                <Link href='/vagas/publicacao/nova-vaga'><a>Nova vaga</a></Link>
+                <Card.Link href='/vagas/publicacao/nova-vaga'>Nova vaga</Card.Link>
               </Card.Title>
 
               <Card.Text>
@@ -55,7 +55,7 @@ const Publicacao = () => {
               />
 
               <Card.Title style={{ justifyContent: 'center' }}>
-                <Link href='/vagas/publicacao/modelos'><a>Usar um modelo</a></Link>
+                <Card.Link href='/vagas/publicacao/modelos'>Usar um modelo</Card.Link>
               </Card.Title>
 
               <Card.Text>
@@ -73,11 +73,11 @@ const Publicacao = () => {
               />
 
               <Card.Title style={{ justifyContent: 'center' }}>
-                <Link href='/vagas/publicacao/recorrentes'><a>Usar uma vaga recorrente</a></Link>
+                <Card.Link href='/vagas/publicacao/recorrentes'>Usar uma vaga recorrente</Card.Link>
               </Card.Title>
 
               <Card.Text>
-                Crie uma vaga a partir de uma vaga anteriormente publicada por você ou por um de seus colaboradores.
+                Crie uma vaga a partir de uma vaga anteriormente publicada.
               </Card.Text>
             </Section.Item>
           }

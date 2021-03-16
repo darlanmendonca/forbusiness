@@ -46,4 +46,9 @@ Section.List = ({ label, children, ...props }) => (
   </List>
 )
 
-Section.Item = props => <Card as='li' { ...props } />
+Section.Item = props => (
+  <Card as='li'
+    style={{ textAlign: 'center' }}
+    { ...props }
+  />
+)

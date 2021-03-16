@@ -66,6 +66,10 @@ export const Item = styled.li`
     outline-offset: 4px;
     cursor: pointer;
 
+    :disabled {
+      cursor: default;
+    }
+
     :before {
       content: counter(steps);
       display: flex;

@@ -1,6 +1,7 @@
-import { Card as CardElement, Title, Illustration, Item, Text, Tag, Carousel } from './card.style.js'
+import { Card as CardElement, Title, Illustration, Item, Text, Link } from './card.style.js'
 import { string, node } from 'prop-types'
 import { Children } from 'react'
+import NextLink from 'next/link'
 
 /**
   * O componente `Card` serve para destacar uma informação, ou um grupo dentre outras.
@@ -37,3 +38,7 @@ Card.Item = Item
 Card.Title = Title
 
 Card.Text = Text
+
+Card.Link = ({ href, ...props }) => (
+  <NextLink href={ href } passHref><Link { ...props } /></NextLink>
+)

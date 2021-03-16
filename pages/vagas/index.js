@@ -9,7 +9,7 @@ import VacancyList from 'components/vacancy-list/vacancy-list.component.js'
   * e permite publicar e editar vagas (baseado nas permissões do usuário).
   */
 const Vagas = () => {
-  const vacancies = useVacancies()
+  const { vacancies } = useVacancies()
 
   return (
     <Page>

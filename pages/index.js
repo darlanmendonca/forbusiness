@@ -14,8 +14,7 @@ import VacancyList from 'components/vacancy-list/vacancy-list.component.js'
   */
 const Home = () => {
   const user = useUser()
-  const vacancies = useVacancies({ 'owner.id': user.id })
-
+  const { vacancies } = useVacancies({ 'owner.id': user.id })
   const currentUser = ({ owner }) => owner.firstname === user.firstname
 
   return (
