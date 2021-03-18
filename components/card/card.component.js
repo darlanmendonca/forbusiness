@@ -1,4 +1,4 @@
-import { Card as CardElement, List, Title, Illustration, Item, Image, Text, Link } from './card.style.js'
+import { Card as CardElement, List, Title, Illustration, Item, Image, Text, Link, Grid } from './card.style.js'
 import { string, node } from 'prop-types'
 import { Children } from 'react'
 import NextLink from 'next/link'
@@ -44,3 +44,5 @@ Card.Image = Image
 Card.Link = ({ href, ...props }) => (
   <NextLink href={ href } passHref><Link { ...props } /></NextLink>
 )
+
+Card.Grid = Grid

@@ -139,3 +139,33 @@ export const Image = styled.div`
     /*margin-top: 160px;*/
   }
 `
+
+export const Grid = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  img {
+    height: 30vh;
+    max-width: 100%;
+  }
+
+  @media (min-width: 1000px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 240px);
+
+    img, div {
+      width: 50%;
+      height: 30vh;
+    }
+
+    img {
+      height: auto;
+    }
+
+    div {
+      height: 500px;
+    }
+  }
+`

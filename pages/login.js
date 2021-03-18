@@ -14,16 +14,35 @@ const Login = () => (
 
     <SiteHeader />
 
-    <Page.Content style={{ display: 'flex', justifyContent: 'center' }}>
-      <div style={{ width: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <Page.Content>
+      <Card.Grid>
         <img
           alt='Pessoas trabalhando em formato Home office'
-          style={{ maxWidth: '100%', width: '100%' }}
           src='working_together_from_home.svg'
         />
-      </div>
-      <Card title='Login' style={{ width: '50%' }} />
+
+        <Card title='Login' style={{ minHeight: 300 }} />
+      </Card.Grid>
+      {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}> */}
+      {/*   <img */}
+      {/*     alt='Pessoas trabalhando em formato Home office' */}
+      {/*     style={{ maxWidth: '100%', height: '30vh' }} */}
+      {/*     src='working_together_from_home.svg' */}
+      {/*   /> */}
+      {/* </div> */}
+      {/* <Card title='Login' style={{ minHeight: 300 }} /> */}
     </Page.Content>
+
+    {/* <Page.Content style={{ display: 'flex', justifyContent: 'center' }}> */}
+    {/*   <div style={{ width: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> */}
+    {/*     <img */}
+    {/*       alt='Pessoas trabalhando em formato Home office' */}
+    {/*       style={{ maxWidth: '100%', width: '100%' }} */}
+    {/*       src='working_together_from_home.svg' */}
+    {/*     /> */}
+    {/*   </div> */}
+    {/*   <Card title='Login' style={{ width: '50%' }} /> */}
+    {/* </Page.Content> */}
   </Page>
 )
 

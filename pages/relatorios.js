@@ -21,7 +21,7 @@ const Relatorios = () => (
 
     <Page.Header>
       <h2>Relatórios</h2>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Descubra as melhores informações de seus dados.</p>
     </Page.Header>
 
     <Page.Content>
