@@ -60,12 +60,10 @@ export const Title = styled.h2`
   font-weight: 600;
   font-size: 18px;
   line-height: 2em;
-  margin: 0 0 8px;
+  margin: 0;
   color: var(--primary);
-
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
 `
 
 export const Text = styled.p`
