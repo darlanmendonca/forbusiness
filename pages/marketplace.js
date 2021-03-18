@@ -19,11 +19,11 @@ const Marketplace = () => {
   )
 
   const toItems = (service, index) => (
-    <Section.Item key={ index }>
-      <Card.Image src='https://pbs.twimg.com/profile_images/489148657459933184/x7SVp67J_400x400.png' />
-      <Card.Title style={{ justifyContent: 'center' }}>
-        <Card.Link href='#'>{ service.name }</Card.Link>
-      </Card.Title>
+    <Section.Item key={ index } style={{ minWidth: 200, height: 200, scrollSnapAlign: 'start' }}>
+      {/* <Card.Image src='https://pbs.twimg.com/profile_images/489148657459933184/x7SVp67J_400x400.png' /> */}
+      {/* <Card.Title style={{ justifyContent: 'center' }}> */}
+      {/*   <Card.Link href='#'>{ service.name }</Card.Link> */}
+      {/* </Card.Title> */}
     </Section.Item>
   )
 

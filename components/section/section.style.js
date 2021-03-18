@@ -33,6 +33,7 @@ export const List = styled.ul`
   margin: 0;
   list-style: none;
   padding: 2px 0;
+  scroll-padding-left: 10px;
 
   @media (max-width: 700px) {
     overflow-x: auto;
