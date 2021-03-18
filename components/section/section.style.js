@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 export const Section = styled.section`
   position: relative;
   box-sizing: border-box;
-  margin: 1.4rem 0 0;
+  margin: 1.4rem 0;
 
   @media (prefers-color-scheme: light) {
     --secondary: var(--tertiary);

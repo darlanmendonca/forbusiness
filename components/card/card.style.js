@@ -54,7 +54,6 @@ export const Link = styled.a`
       }
     }
   }
-
 `
 
 export const Title = styled.h2`
@@ -122,5 +121,23 @@ export const Item = styled.li`
       box-shadow: 0 0 0 0 var(--accent);
       transition: box-shadow var(--fast) ease;
     }
+  }
+`
+
+export const Image = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  background: red;
+  width: 100%;
+  height: 160px;
+  background-image: url(${ props => props.src });
+  background-size: cover;
+  display: none;
+
+  & + h2 {
+    /*margin-top: 160px;*/
   }
 `

@@ -37,13 +37,19 @@ Section.propTypes = {
 
 Section.Options = Options
 
-Section.List = ({ label, children, ...props }) => (
-  <List
-    aria-label={ label }
-    { ...props }
-  >
-    { children }
-  </List>
+Section.List = ({ label, title, children, ...props }) => (
+  <SectionElement>
+    { title &&
+      <Title>{ title }</Title>
+    }
+
+    <List
+      aria-label={ label || title }
+      { ...props }
+    >
+      { children }
+    </List>
+  </SectionElement>
 )
 
 Section.Item = props => (
