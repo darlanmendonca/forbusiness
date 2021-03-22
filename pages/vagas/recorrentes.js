@@ -23,7 +23,7 @@ const Recorrentes = () => {
         <Page.Content>
           <VacancyList
             title='Vagas recorrentes'
-            vacancies={ recurrents }
+            vacancies={ recurrents.data }
             type='recurrents'
           />
         </Page.Content>

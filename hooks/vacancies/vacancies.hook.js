@@ -1,151 +1,42 @@
+import useFetch from 'hooks/fetch/fetch.hook.js'
+import { useState, useEffect } from 'react'
+
 /**
-  * Lista as vagas da empresa, sendo possível filtrar por
-  * - status
+  * Lista as vagas da empresa, sendo possível carregar por 3 tipos
+  * - vagas publicadas e/ou agendadas
+  * - vagas modelo
+  * - vagas recorrentes
   */
 const useVacancies = (params = {}) => {
-  const moises = {
-    id: 1,
-    firstname: 'Moisés',
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlnbPwGl2V5JYyHx0FKy1daEeMN77cDCKPjQ&usqp=CAU',
-  }
+  const [ loads, setLoads ] = useState({})
 
-  const baby = {
-    id: 2,
-    firstname: 'Baby',
-    image: 'https://www.ibahia.com/fileadmin/user_upload/menino_meme_3.jpg',
-  }
+  const vacancies = useFetch('/api/vagas', {
+    params,
+    revalidateOnMount: loads.vacancies,
+  })
 
-  const juliana = {
-    id: 3,
-    firstname: 'Juliana',
-    image: 'https://i.pinimg.com/originals/5d/ac/fc/5dacfc043a93698713fb4a1ae7f9eb3f.jpg',
-  }
+  const templates = useFetch('/api/vagas-modelo', {
+    revalidateOnMount: loads.templates,
+  })
 
-  const vacancies = [
-    {
-      id: 'v2167406',
-      name: 'Auxiliar administrativo',
-      status: 'Agendada',
-      date: {
-        open: new Date('2021-03-01T00:00:00'),
-        expiration: new Date('2021-03-30T00:00:00'),
-      },
-      location: 'Salvador',
-      owner: baby,
-    },
-    {
-      id: 'v2167408',
-      name: 'Recepcionista',
-      status: 'Encerrada',
-      date: {
-        open: new Date('2021-03-01T00:00:00'),
-        expiration: new Date('2021-03-30T00:00:00'),
-      },
-      location: 'Salvador',
-      owner: juliana,
-    },
-    {
-      id: 'v2167409',
-      name: 'Analista de Testes',
-      level: 'Júnior',
-      status: 'Em andamento',
-      date: {
-        open: new Date('2021-03-01T00:00:00'),
-        expiration: new Date('2021-03-30T00:00:00'),
-      },
-      location: 'São Paulo',
-      owner: moises,
-    },
-    {
-      id: 'v2167410',
-      name: 'Analista de Testes',
-      level: 'Pleno',
-      status: 'Em andamento',
-      date: {
-        open: new Date('2021-03-01T00:00:00'),
-        expiration: new Date('2021-03-30T00:00:00'),
-      },
-      location: 'Salvador, Home Office',
-      owner: moises,
-    },
-    {
-      id: 'v2167411',
-      name: 'Analista de Testes',
-      level: 'Sênior',
-      status: 'Em andamento',
-      date: {
-        open: new Date('2021-03-01T00:00:00'),
-        expiration: new Date('2021-03-30T00:00:00'),
-      },
-      location: 'Home Office',
-      owner: moises,
-    },
-    {
-      id: 'v2167411',
-      name: 'Engenheiro(a) Frontend',
-      level: 'Sênior',
-      status: 'Em andamento',
-      date: {
-        open: new Date('2021-03-01T00:00:00'),
-        expiration: new Date('2021-03-30T00:00:00'),
-      },
-      location: 'Home Office',
-      owner: moises,
-    },
-  ]
+  const recurrents = useFetch('/api/vagas-recorrentes', {
+    revalidateOnMount: loads.recurrents,
+  })
 
-  const templates = [
-    {
-      id: 'm2167406',
-      name: 'Auxiliar administrativo',
-      location: 'Salvador',
-      owner: baby,
-    },
-    {
-      id: 'm2167311',
-      name: 'Engenheiro(a) Frontend',
-      level: 'Sênior',
-      location: 'São Paulo',
-      owner: moises,
-    },
-    {
-      id: 'm2167312',
-      name: 'Engenheiro(a) Frontend',
-      level: 'Sênior',
-      location: 'Home Office',
-      owner: moises,
-    },
-  ]
-
-  const recurrents = [
-    {
-      id: 'v2167411',
-      name: 'Analista de Testes',
-      level: 'Sênior',
-      location: 'Home Office',
-      owner: moises,
-    },
-    {
-      id: 'v2167411',
-      name: 'Analista de Testes',
-      level: 'Sênior',
-      location: 'Home Office',
-      owner: moises,
-    },
-    {
-      id: 'v2167411',
-      name: 'Engenheiro(a) Frontend',
-      level: 'Sênior',
-      location: 'Home Office',
-      owner: moises,
-    },
-  ]
-
-  return {
+  const vacancyTypes = {
     vacancies,
     templates,
     recurrents,
   }
+
+  return new Proxy(vacancyTypes, {
+    get: function(target, name) {
+      if (!loads[name]) {
+        setLoads(data => ({ ...data, [name]: true }))
+      }
+      return target[name]
+    }
+  })
 }
 
 export default useVacancies

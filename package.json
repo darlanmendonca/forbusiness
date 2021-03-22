@@ -16,7 +16,8 @@
     "boxicons": "^2.0.7",
     "next": "10.0.7",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "swr": "^0.5.4"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.2.0",

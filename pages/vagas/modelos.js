@@ -23,7 +23,7 @@ const Modelos = () => {
         <Page.Content>
           <VacancyList
             title='Modelos de vaga'
-            vacancies={ templates }
+            vacancies={ templates.data }
             type='templates'
           />
         </Page.Content>

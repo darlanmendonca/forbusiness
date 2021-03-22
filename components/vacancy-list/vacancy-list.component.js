@@ -8,7 +8,7 @@ import Avatar from 'components/avatar/avatar.component.js'
 import useUser  from 'hooks/user/user.hook.js'
 import Modal, { useModal } from 'components/modal/modal.component.js'
 
-const VacancyList = ({ title = 'Vagas', vacancies, type='vacancies' }) => {
+const VacancyList = ({ title = 'Vagas', vacancies = [], type='vacancies' }) => {
   const user = useUser()
   const search = useModal()
   const day = 'numeric'
@@ -77,9 +77,9 @@ const VacancyList = ({ title = 'Vagas', vacancies, type='vacancies' }) => {
               icon='time-five'
               color={ status === 'Encerrada' ? 'var(--yellow)' : 'var(--green)' }
             >
-              { date.open.toLocaleDateString('pt-BR', { day }) }
+              { new Date(date.open).toLocaleDateString('pt-BR', { day }) }
               { ' a ' }
-              { date.expiration.toLocaleDateString('pt-BR', { day, month }) }
+              { new Date(date.expiration).toLocaleDateString('pt-BR', { day, month }) }
             </Tags.Item>
           }
 

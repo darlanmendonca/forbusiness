@@ -15,7 +15,6 @@ import VacancyList from 'components/vacancy-list/vacancy-list.component.js'
 const Home = () => {
   const user = useUser()
   const { vacancies } = useVacancies({ 'owner.id': user.id })
-  const currentUser = ({ owner }) => owner.firstname === user.firstname
 
   return (
     <Page>
@@ -45,7 +44,7 @@ const Home = () => {
 
         <VacancyList
           title='Suas vagas'
-          vacancies={ vacancies.filter(currentUser) }
+          vacancies={ vacancies.data }
         />
       </Page.Content>
     </Page>

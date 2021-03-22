@@ -90,7 +90,7 @@ const Vagas = () => {
         </Section.List>
 
         <VacancyList
-          vacancies={ vacancies }
+          vacancies={ vacancies.data }
         />
       </Page.Content>
     </Page>
