@@ -28,6 +28,9 @@ body {
 
   /* border radius */
   --smooth-radius: 8px;
+
+  /* button/icon sizes  */
+  --medium-size: 44px;
 }
 
 

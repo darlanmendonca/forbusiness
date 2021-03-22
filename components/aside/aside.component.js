@@ -18,7 +18,7 @@ const Aside = ({ children, title, controller }) => (
     <CloseButton
       label='Fechar'
       icon='x-circle'
-      size='44px'
+      size='var(--medium-size)'
       solid
       onClick={ controller.hide }
       ref={ controller.closeButtonRef }
