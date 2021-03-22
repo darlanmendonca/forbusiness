@@ -22,6 +22,7 @@ const Icon = ({ name, solid, color, size = '1em', ...props}) => {
     <>
       <IconComponent
         size={ size }
+        color={ color }
         { ...props }
       />
     </>

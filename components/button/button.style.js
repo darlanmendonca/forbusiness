@@ -15,6 +15,7 @@ export const FlatButton = styled.button`
   position: relative;
   transform: translateZ(0);
   z-index: 1;
+  color: var(--primary);
 
 
   @media (hover: hover) {

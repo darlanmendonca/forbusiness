@@ -13,7 +13,6 @@ const Button = forwardRef(({ children, label, icon, solid, size, ...props }, ref
       <Icon
         name={ icon }
         solid={ solid }
-        color='var(--primary)'
         size={ size }
         aria-hidden='true'
       />
