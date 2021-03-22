@@ -6,7 +6,7 @@ import * as Solid from '@styled-icons/boxicons-solid'
   * O componente `Icon` exibe ícones baseado na lib boxicons.
   * Para uma referência completa acesse [boxicons docs](https://boxicons.com/usage/).
   */
-const Icon = ({ name, solid, color='currentColor', size = '1em', ...props}) => {
+const Icon = ({ name, solid, color, size = '1em', ...props}) => {
   const toCamelCase = string => '-'.concat(string)
     .replace(/-([a-z0-9])/g, (_, letter) => letter.toUpperCase())
 
@@ -21,7 +21,6 @@ const Icon = ({ name, solid, color='currentColor', size = '1em', ...props}) => {
   return (
     <>
       <IconComponent
-        color={ color }
         size={ size }
         { ...props }
       />

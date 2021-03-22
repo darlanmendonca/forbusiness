@@ -9,7 +9,7 @@ body {
   --background: #eee;
   --foreground: white;
   --primary: #373737;
-  --secondary: rgba(255, 255, 255, .2);
+  --secondary: rgba(0, 0, 0, .2);
   --tertiary: #d4d5d5;
   --accent: var(--professionals-color);
   --yellow: #f7b500;

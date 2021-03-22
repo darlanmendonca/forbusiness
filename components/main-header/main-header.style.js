@@ -8,7 +8,7 @@ export const Header = styled.header`
   top: 0;
   z-index: 10;
   background: var(--brand-gradient);
-  --primary: white;
+  color: white;
 `
 
 export const Container = styled.div`
@@ -21,6 +21,15 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+
+  button {
+    color: inherit;
+
+    &:not([role="menuitem"]) {
+      --secondary: rgba(255, 255, 255, .2);
+    }
+  }
+
 
   nav, aside {
     @media (max-width: 1200px) {
@@ -53,9 +62,9 @@ export const NavigationLink = styled.a`
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
+  color: inherit;
 
   ${ props => props.theme.type === 'desktop' && css`
-    color: white;
     margin-right: 33px;
     position: relative;
     line-height: 66px;
