@@ -23,8 +23,9 @@ const Recorrentes = () => {
         <Page.Content>
           <VacancyList
             title='Vagas recorrentes'
-            vacancies={ recurrents.data }
             type='recurrents'
+            vacancies={ recurrents.data }
+            loading={ recurrents.isValidating }
           />
         </Page.Content>
       </Page>

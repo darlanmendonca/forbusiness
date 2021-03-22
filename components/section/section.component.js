@@ -3,7 +3,7 @@ import { string, node } from 'prop-types'
 import { Children } from 'react'
 import Card from 'components/card/card.component.js'
 
-const Section = ({ title, subtitle, children, list, ...props }) => {
+const Section = ({ title, subtitle, children, list, loading, ...props }) => {
   const options = child => child.type !== Options
   const sectionOptions = Children.toArray(children).find(child => child.type === Options)
   const hasList = Children.toArray(children).some(child => child.type === Card.Item)
@@ -18,8 +18,8 @@ const Section = ({ title, subtitle, children, list, ...props }) => {
 
       { sectionOptions }
 
-      <CardElement>
-        { Children.toArray(children).filter(options) }
+      <CardElement aria-live='polite' aria-busy={ loading }>
+        { !loading && Children.toArray(children).filter(options) }
       </CardElement>
     </SectionElement>
   )

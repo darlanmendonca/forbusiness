@@ -23,8 +23,9 @@ const Modelos = () => {
         <Page.Content>
           <VacancyList
             title='Modelos de vaga'
-            vacancies={ templates.data }
             type='templates'
+            vacancies={ templates.data }
+            loading={ templates.isValidating }
           />
         </Page.Content>
       </Page>

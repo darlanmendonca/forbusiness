@@ -91,6 +91,7 @@ const Vagas = () => {
 
         <VacancyList
           vacancies={ vacancies.data }
+          loading={ vacancies.isValidating }
         />
       </Page.Content>
     </Page>

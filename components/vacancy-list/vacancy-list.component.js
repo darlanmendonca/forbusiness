@@ -8,7 +8,7 @@ import Avatar from 'components/avatar/avatar.component.js'
 import useUser  from 'hooks/user/user.hook.js'
 import Modal, { useModal } from 'components/modal/modal.component.js'
 
-const VacancyList = ({ title = 'Vagas', vacancies = [], type='vacancies' }) => {
+const VacancyList = ({ title = 'Vagas', vacancies = [], type='vacancies', loading }) => {
   const user = useUser()
   const search = useModal()
   const day = 'numeric'
@@ -99,7 +99,7 @@ const VacancyList = ({ title = 'Vagas', vacancies = [], type='vacancies' }) => {
 
   return (
     <>
-      <Section title={ title }>
+      <Section title={ title } loading={ loading }>
         { type === 'vacancies' &&
           <Section.Options>
             <Button label='Buscar vagas' icon='search' onClick={ search.show } />

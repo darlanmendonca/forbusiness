@@ -45,6 +45,7 @@ const Home = () => {
         <VacancyList
           title='Suas vagas'
           vacancies={ vacancies.data }
+          loading={ vacancies.isValidating }
         />
       </Page.Content>
     </Page>

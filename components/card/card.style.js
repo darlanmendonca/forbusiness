@@ -17,6 +17,15 @@ export const Card = styled.div`
     min-height: 200px;
   }
 
+  &[aria-busy="true"] {
+    animation: loading var(--normal) ease alternate infinite;
+  }
+
+  @keyframes loading {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
   @media (prefers-color-scheme: light) {
     --secondary: var(--tertiary);
   }

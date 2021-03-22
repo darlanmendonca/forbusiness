@@ -25,6 +25,7 @@ body {
 
   /* motion */
   --fast: .2s;
+  --normal: .4s;
 
   /* border radius */
   --smooth-radius: 8px;
@@ -53,5 +54,6 @@ body {
 @media (prefers-reduced-motion) {
   body {
     --fast: 0s;
+    --normal: 0s;
   }
 }
