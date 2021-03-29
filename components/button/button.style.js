@@ -1,12 +1,14 @@
 import styled from '@emotion/styled'
+import { css  } from '@emotion/react'
 
-export const FlatButton = styled.button`
+export const Button = styled.button`
   display: inline-flex;
   position: relative;
   border: 0;
   background: none;
-  width: ${ props => props.size || '40px' };
-  height: ${ props => props.size || '40px' };
+  min-width: 40px;
+  height: 40px;
+  line-height: 40px;
   align-items: center;
   justify-content: center;
   border-radius: var(--smooth-radius);
@@ -16,10 +18,22 @@ export const FlatButton = styled.button`
   transform: translateZ(0);
   z-index: 1;
   color: var(--primary);
+  padding: ${ props => !props.icon ? '12px' : '0px' };
 
+  :hover, :focus {
+    background-color: var(--secondary);
+  }
+
+  ${ props => props.primary && css`
+    background: var(--accent);
+
+    :hover, :focus {
+      background: #129cff;
+    }
+  `}
 
   @media (hover: hover) {
-    :after {
+    &[aria-label]:after {
       content: attr(aria-label);
       font-size: 13px;
       line-height: 1.2em;
@@ -43,10 +57,6 @@ export const FlatButton = styled.button`
         opacity: 1;
       }
     }
-  }
-
-  :hover, :focus {
-    background-color: var(--secondary);
   }
 
   svg {

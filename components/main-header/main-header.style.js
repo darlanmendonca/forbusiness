@@ -67,8 +67,6 @@ export const NavigationLink = styled.a`
   ${ props => props.theme.type === 'desktop' && css`
     margin-right: 33px;
     position: relative;
-    line-height: 66px;
-    height: 44px;
     outline-offset: 10px;
 
     :last-of-type {
@@ -120,11 +118,19 @@ export const NavigationLink = styled.a`
 `
 
 export const Options = styled.aside`
+  display: flex;
+  flex-direction: row;
+
+  a, button {
+    margin-left: 4px;
+  }
+
   ${ props => props.theme.type === 'mobile' && css`
     margin-top: 40px;
     padding: 20px 10px;
     border-top: 1px solid var(--secondary);
     position: relative;
+    display: block;
 
     :before {
       content: attr(aria-label);
@@ -186,7 +192,6 @@ export const AvatarButton = styled(Avatar)`
   cursor: pointer;
 
   ${ props => props.theme.type === 'desktop' && css`
-    transform: translateY(-2px);
     margin-left: 8px;
   `}
 
