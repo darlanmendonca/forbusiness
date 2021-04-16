@@ -6,19 +6,19 @@ export const useSegmentHeader = () => {
   const segments = [
     {
       id: 'institutional',
-      label: 'Institucional',
+      label: 'Colaboradores',
       url: process.env.NEXT_PUBLIC_URL_INSTITUCIONAL,
       color: 'var(--institutional-color)',
     },
     {
       id: 'candidates',
-      label: 'Para candidatos',
+      label: 'Candidatos',
       url: process.env.NEXT_PUBLIC_URL_CANDIDATOS,
       color: 'var(--candidates-color)',
     },
     {
       id: 'professionals',
-      label: 'Para empresas',
+      label: 'Empresas',
       url: process.env.NEXT_PUBLIC_URL_EMPRESAS,
       color: 'var(--professionals-color)',
     },
